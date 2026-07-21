@@ -1,0 +1,161 @@
+{
+    "interface_version": 2,
+    "name": "MAA-E7",
+    "description": "《第七史诗》自动化脚本 - 只可以完成每日任务",
+    "contact": "",
+    "license": "MIT",
+    "welcome": "欢迎使用第七史诗自动化助手",
+    "version": "1.0.0",
+    
+    "controller": [
+        {
+            "name": "PC",
+            "label": "PC",
+            "type": "Win32",
+            "win32": {
+                "class_regex": "UnityWndClass",
+                "window_regex": "雷索纳斯",
+                "screencap": "PrintWindow",
+                "mouse": "SendMessageWithCursorPos",
+                "keyboard": "SendMessageWithCursorPos"
+        }
+    ],
+    
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "./resource"
+            ]
+        }
+    ],
+    
+    "task": [
+        {
+            "name": "🎮 进入游戏",
+            "entry": "启动游戏",
+            "description": "自动启动游戏并进入游戏（不可以在游戏界面内启动欧）",
+            "option": ["启动模式"]
+        },
+        {
+            "name": "📧 邮件奖励领取",
+            "entry": "开始领取邮件奖励",
+            "description": "领取邮箱内所有奖励"
+        },
+        {
+            "name": "🛒 商店购买每日物品",
+            "entry": "进入商店界面",
+            "description": "只买每日免费礼包"
+        },
+        {
+            "name": "🎲 免费召唤使用",
+            "entry": "免费召唤开始",
+            "description": "使用免费召唤（单抽或十连）"
+        },
+        {
+            "name": "⚔️ 刷体力",
+            "entry": "进入战斗界面",
+            "description": "可自定义选择要刷取的讨伐副本；只刷地狱级难度！！！！",
+            "option": ["讨伐关卡选择"]
+        },
+        {
+            "name": "🏟️ 竞技场10次",
+            "entry": "进入竞技场选择",
+            "description": "只刷人机竞技场，快速战斗次数和挑战次数任一不足时会退出"
+        },
+        {
+            "name": "⚔️ 骑士团签到并请求资源",
+            "entry": "点击主界面菜单选择",
+            "description": "只会请求经验精灵"
+        },
+        {
+            "name": "🎁 领取活跃度奖励",
+            "entry": "进入选择菜单前等待",
+            "description": "只会领取活跃度100时的奖励，未到100不会领取"
+        },
+        {
+            "name": "⏹️ 退出游戏",
+            "entry": "退出游戏",
+            "description": "其实没必要，直接使用设置里的\"任务完成后退出\"即可"
+        }
+    ],
+    
+    "option": {
+        "讨伐关卡选择": {
+            "type": "select",
+            "label": "讨伐关卡选择",
+            "description": "选择要自动刷取的讨伐副本",
+            "default_case": "双足飞龙",
+            "cases": [
+                {
+                    "name": "双足飞龙",
+                    "label": "双足飞龙",
+                    "description": "暴击/命中/速度",
+                    "pipeline_override": {
+                        "开始讨伐关卡选择": {
+                            "next": ["选择双足飞龙关卡"]
+                        }
+                    }
+                },
+                {
+                    "name": "魔像",
+                    "label": "魔像",
+                    "description": "攻击/生命/防御/守护",
+                    "pipeline_override": {
+                        "开始讨伐关卡选择": {
+                            "next": ["选择魔像关卡"]
+                        }
+                    }
+                },
+                {
+                    "name": "报丧妖",
+                    "label": "报丧妖",
+                    "description": "抵抗/吸血/爆伤/反击",
+                    "pipeline_override": {
+                        "开始讨伐关卡选择": {
+                            "next": ["选择报丧妖关卡"]
+                        }
+                    }
+                },
+                {
+                    "name": "阿吉玛纳克",
+                    "label": "阿吉玛纳克",
+                    "description": "夹攻/免疫/愤怒",
+                    "pipeline_override": {
+                        "开始讨伐关卡选择": {
+                            "next": ["选择讨伐阿吉玛纳克关卡"]
+                        }
+                    }
+                },
+                {
+                    "name": "卡戴斯",
+                    "label": "卡戴斯",
+                    "description": "憎恨/伤口/穿透/激流",
+                    "pipeline_override": {
+                        "开始讨伐关卡选择": {
+                            "next": ["选择讨伐卡戴斯关卡"]
+                        }
+                    }
+                }
+            ]
+        },
+        "启动模式": {
+            "type": "select",
+            "label": "启动模式",
+            "description": "选择进入游戏的方式",
+            "default_case": "启动游戏",
+            "cases": [
+                {
+                    "name": "开始启动游戏",
+                    "label": "🚀正常启动游戏",
+                    "description": "正常启动游戏客户端"
+                },
+                {
+                    "name": "仅检测公告栏",
+                    "label": "📋跳过启动游戏",
+                    "description": "不启动游戏，直接开始任务（适用于模拟器启动游戏）"
+                }
+            ]
+        }
+    }
+}
