@@ -1,0 +1,103 @@
+{
+    "$__mpe_config_进入铁安局界面": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1784707028861,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\组件\\进入铁安局界面.json",
+            "savedViewport": {
+                "x": -2708,
+                "y": 317,
+                "zoom": 0.75
+            },
+            "filename": "进入铁安局界面",
+            "version": "v1.7.4"
+        }
+    },
+    "进入铁安局界面开始": {
+        "post_delay": 3000,
+        "next": [
+            "选择作战终端-铁安局界面",
+            "[JumpBack]返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4001,
+                "y": -160
+            }
+        }
+    },
+    "进入铁安局界面结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5070,
+                "y": -141
+            }
+        }
+    },
+    "选择作战终端-铁安局界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1151,
+                    389,
+                    95,
+                    52
+                ],
+                "expected": [
+                    "作战终端"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择铁安局选项"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4357,
+                "y": -267
+            }
+        }
+    },
+    "选择铁安局选项": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    690,
+                    363,
+                    120,
+                    68
+                ],
+                "expected": [
+                    "铁安局"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入铁安局界面结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4700,
+                "y": -279
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_进入铁安局界面": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4373,
+                "y": 67
+            }
+        }
+    }
+}

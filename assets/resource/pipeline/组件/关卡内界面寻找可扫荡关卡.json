@@ -1,0 +1,193 @@
+{
+    "$__mpe_config_关卡内界面寻找可扫荡关卡": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -3588,
+                "y": 191,
+                "zoom": 0.49
+            },
+            "filename": "关卡内界面寻找可扫荡关卡",
+            "version": "v1.7.4"
+        }
+    },
+    "关卡内界面寻找扫荡关卡开始": {
+        "post_delay": 3000,
+        "next": [
+            "判断默认关卡是否可扫荡",
+            "[JumpBack]关卡选择上一关卡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7811,
+                "y": 110
+            }
+        }
+    },
+    "关卡选择上一关卡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    38,
+                    534,
+                    1158,
+                    63
+                ],
+                "template": [
+                    "关卡选择橙标.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -182,
+                    15,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8290,
+                "y": 221
+            }
+        }
+    },
+    "判断默认关卡是否可扫荡": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    800,
+                    468,
+                    134,
+                    68
+                ],
+                "expected": [
+                    "扫荡"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "扫荡关卡开始",
+            "体力是不是不足了-关卡选择",
+            "挑战次数用尽了"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8281,
+                "y": -45
+            }
+        }
+    },
+    "扫荡关卡开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    685,
+                    508,
+                    150,
+                    34
+                ],
+                "expected": [
+                    "开始扫荡"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 6000,
+        "next": [
+            "开始下一次扫荡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8689,
+                "y": -193
+            }
+        }
+    },
+    "体力是不是不足了-关卡选择": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    466,
+                    330,
+                    471,
+                    66
+                ],
+                "expected": [
+                    "澄明度不足"
+                ]
+            }
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8762,
+                "y": 93
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_关卡内界面寻找可扫荡关卡": {
+        "$__mpe_code": {
+            "position": {
+                "x": 9173,
+                "y": 284
+            }
+        }
+    },
+    "开始下一次扫荡": {
+        "next": [
+            "关卡内界面寻找扫荡关卡开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9010,
+                "y": -282
+            }
+        }
+    },
+    "挑战次数用尽了": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    538,
+                    332,
+                    199,
+                    47
+                ],
+                "expected": [
+                    "挑战次数已用完"
+                ]
+            }
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8756,
+                "y": 390
+            }
+        }
+    }
+}

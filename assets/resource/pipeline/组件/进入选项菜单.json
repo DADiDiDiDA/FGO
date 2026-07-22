@@ -1,0 +1,84 @@
+{
+    "$__mpe_config_进入选项菜单": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1784706975730,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\组件\\进入选项菜单.json",
+            "savedViewport": {
+                "x": -2425,
+                "y": 246,
+                "zoom": 0.86
+            },
+            "filename": "进入选项菜单",
+            "version": "v1.7.4"
+        }
+    },
+    "$__mpe_external_返回主界面开始_进入选项菜单": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3550,
+                "y": 104
+            }
+        }
+    },
+    "进入选项菜单": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    119,
+                    675,
+                    73,
+                    28
+                ],
+                "expected": [
+                    "Lv"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    -23,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 4000,
+        "next": [
+            "进入选项菜单结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3517,
+                "y": -287
+            }
+        }
+    },
+    "进入选项菜单开始": {
+        "post_delay": 2000,
+        "next": [
+            "进入选项菜单",
+            "[JumpBack]返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3132,
+                "y": -101
+            }
+        }
+    },
+    "进入选项菜单结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3845,
+                "y": -215
+            }
+        }
+    }
+}

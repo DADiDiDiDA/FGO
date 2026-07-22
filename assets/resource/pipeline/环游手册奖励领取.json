@@ -1,0 +1,226 @@
+{
+    "$__mpe_config_环游手册奖励领取": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -4194,
+                "y": 356,
+                "zoom": 0.86
+            },
+            "filename": "环游手册奖励领取",
+            "version": "v1.7.4"
+        }
+    },
+    "环游手册奖励领取": {
+        "next": [
+            "环游手册奖励开始",
+            "[JumpBack]进入选项菜单开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4794,
+                "y": -155
+            }
+        }
+    },
+    "环游手册奖励开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    97,
+                    410,
+                    557,
+                    277
+                ],
+                "expected": [
+                    "环游手册"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有没有待领取任务",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5161,
+                "y": -289
+            }
+        }
+    },
+    "$__mpe_external_进入选项菜单开始_环游手册奖励领取": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5161,
+                "y": -26
+            }
+        }
+    },
+    "有没有待领取任务": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    621,
+                    645,
+                    174,
+                    49
+                ],
+                "template": [
+                    "红色感叹号.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有没有一键领取任务积分-环游手册",
+            "检查所有任务是否已经领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5557,
+                "y": -494
+            }
+        }
+    },
+    "有没有一键领取任务积分-环游手册": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1052,
+                    648,
+                    178,
+                    45
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 8000,
+        "$__mpe_code": {
+            "position": {
+                "x": 6313,
+                "y": -745
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_环游手册奖励领取": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6174,
+                "y": 32
+            }
+        }
+    },
+    "检查所有任务是否已经领取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    371,
+                    123,
+                    885,
+                    68
+                ],
+                "template": [
+                    "红色感叹号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有没有一键领取任务积分-环游手册",
+            "开始判断有没有待领取奖励-环游手册"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6016,
+                "y": -411
+            }
+        }
+    },
+    "开始领取任务奖励-环游手册": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    360,
+                    643,
+                    194,
+                    58
+                ],
+                "template": [
+                    "红色感叹号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有没有一键领取等级奖励-环游手册"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6781,
+                "y": -681
+            }
+        }
+    },
+    "开始判断有没有待领取奖励-环游手册": {
+        "next": [
+            "开始领取任务奖励-环游手册",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6337,
+                "y": -367
+            }
+        }
+    },
+    "有没有一键领取等级奖励-环游手册": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1052,
+                    648,
+                    178,
+                    45
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 8000,
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7125,
+                "y": -568
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "$__mpe_config_派遣委托任务开始": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1784704573073,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\派遣委托任务开始.json",
+            "savedViewport": {
+                "x": -1656,
+                "y": 26,
+                "zoom": 0.84
+            },
+            "filename": "派遣委托任务开始",
+            "version": "v1.7.4"
+        }
+    },
+    "$__mpe_external_返回主界面开始_派遣委托任务开始": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3523,
+                "y": 590
+            }
+        }
+    },
+    "判断派遣任务是否有完成的": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1137,
+                    329,
+                    120,
+                    37
+                ],
+                "expected": [
+                    "委派奖励可收取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有完成的-领取奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2669,
+                "y": 48
+            }
+        }
+    },
+    "有完成的-领取奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    894,
+                    605,
+                    183,
+                    61
+                ],
+                "expected": [
+                    "领取奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有完成的-再次派遣"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2991,
+                "y": 173
+            }
+        }
+    },
+    "派遣任务开始": {
+        "next": [
+            "判断派遣任务是否有完成的",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2349,
+                "y": 228
+            }
+        }
+    },
+    "有完成的-再次派遣": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    720,
+                    618,
+                    144,
+                    45
+                ],
+                "expected": [
+                    "再次委托"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3306,
+                "y": 198
+            }
+        }
+    }
+}

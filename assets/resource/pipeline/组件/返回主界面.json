@@ -1,0 +1,106 @@
+{
+    "$__mpe_config_返回主界面": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1784708828386,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\组件\\返回主界面.json",
+            "savedViewport": {
+                "x": -913,
+                "y": 179,
+                "zoom": 0.74
+            },
+            "filename": "返回主界面",
+            "version": "v1.7.4"
+        }
+    },
+    "判断是否在主界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1088,
+                    381,
+                    189,
+                    69
+                ],
+                "template": [
+                    "主界面特征.png"
+                ]
+            }
+        },
+        "next": [
+            "已在主界面任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2147,
+                "y": -354
+            }
+        }
+    },
+    "已在主界面任务结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2495,
+                "y": -309
+            }
+        }
+    },
+    "按ESc返回主界面": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    4,
+                    111
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2169,
+                "y": 191
+            }
+        }
+    },
+    "返回主界面开始": {
+        "next": [
+            "判断是否在主界面",
+            "[JumpBack]有取消按钮",
+            "[JumpBack]按ESc返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1725,
+                "y": 52
+            }
+        }
+    },
+    "有取消按钮": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    263,
+                    474,
+                    126,
+                    61
+                ],
+                "expected": [
+                    "取消"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2165,
+                "y": -29
+            }
+        }
+    }
+}
