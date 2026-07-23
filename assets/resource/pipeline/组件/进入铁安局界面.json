@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784707028861,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\组件\\进入铁安局界面.json",
             "savedViewport": {
-                "x": -2708,
-                "y": 317,
-                "zoom": 0.75
+                "x": -2702,
+                "y": 270,
+                "zoom": 0.76
             },
             "filename": "进入铁安局界面",
             "version": "v1.7.4"
@@ -54,6 +51,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "next": [
             "选择铁安局选项"
         ],
@@ -82,6 +80,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "next": [
             "进入铁安局界面结束"
         ],

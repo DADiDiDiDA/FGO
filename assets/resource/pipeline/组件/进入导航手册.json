@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784706970979,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\组件\\进入导航手册.json",
             "savedViewport": {
-                "x": -3378,
-                "y": 261,
-                "zoom": 0.86
+                "x": -2813,
+                "y": 311,
+                "zoom": 0.76
             },
             "filename": "进入导航手册",
             "version": "v1.7.4"
@@ -65,6 +62,7 @@
         }
     },
     "进入导航手册结束": {
+        "post_delay": 3000,
         "$__mpe_code": {
             "position": {
                 "x": 4953,

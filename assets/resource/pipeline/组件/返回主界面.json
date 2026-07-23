@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784708828386,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\组件\\返回主界面.json",
             "savedViewport": {
-                "x": -913,
-                "y": 179,
-                "zoom": 0.74
+                "x": -993,
+                "y": 86,
+                "zoom": 0.76
             },
             "filename": "返回主界面",
             "version": "v1.7.4"
@@ -30,6 +27,7 @@
                 ]
             }
         },
+        "post_delay": 3000,
         "next": [
             "已在主界面任务结束"
         ],
@@ -66,6 +64,7 @@
         }
     },
     "返回主界面开始": {
+        "post_delay": 2000,
         "next": [
             "判断是否在主界面",
             "[JumpBack]有取消按钮",

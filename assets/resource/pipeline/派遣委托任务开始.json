@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784704573073,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\派遣委托任务开始.json",
             "savedViewport": {
-                "x": -1656,
-                "y": 26,
-                "zoom": 0.84
+                "x": -1321,
+                "y": 28,
+                "zoom": 0.66
             },
             "filename": "派遣委托任务开始",
             "version": "v1.7.4"
@@ -41,6 +38,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "有完成的-领取奖励"
         ],
@@ -69,6 +67,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 1000,
         "next": [
             "有完成的-再次派遣"
         ],
@@ -80,6 +79,7 @@
         }
     },
     "派遣任务开始": {
+        "post_delay": 3000,
         "next": [
             "判断派遣任务是否有完成的",
             "返回主界面开始"

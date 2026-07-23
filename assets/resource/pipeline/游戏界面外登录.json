@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784703744089,
+            "lastSyncTime": 1784720300330,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\游戏界面外登录.json",
             "savedViewport": {
-                "x": -457,
-                "y": 81,
-                "zoom": 0.75
+                "x": -721,
+                "y": 197,
+                "zoom": 1
             },
             "filename": "游戏界面外登录",
             "version": "v1.7.4"
@@ -106,10 +106,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    489,
-                    415,
-                    366,
-                    91
+                    531,
+                    476,
+                    231,
+                    66
                 ],
                 "expected": [
                     "确认"
