@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784720300330,
+            "lastSyncTime": 1784940928422,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\游戏界面外登录.json",
             "savedViewport": {
-                "x": -721,
-                "y": 197,
-                "zoom": 1
+                "x": -259,
+                "y": 99,
+                "zoom": 0.66
             },
             "filename": "游戏界面外登录",
             "version": "v1.7.4"
@@ -28,13 +28,13 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    449,
-                    533,
-                    438,
-                    60
+                    441,
+                    515,
+                    398,
+                    84
                 ],
                 "expected": [
-                    "下载已经完成，点击任意位置进入游戏"
+                    "进入游戏"
                 ]
             }
         },
@@ -43,8 +43,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 1330,
-                "y": 166
+                "x": 1368,
+                "y": 146
             }
         }
     },
@@ -53,13 +53,13 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    539,
                     529,
-                    205,
-                    83
+                    523,
+                    235,
+                    102
                 ],
                 "expected": [
-                    "点击屏幕进入游戏"
+                    "点击屏幕进入"
                 ]
             }
         },

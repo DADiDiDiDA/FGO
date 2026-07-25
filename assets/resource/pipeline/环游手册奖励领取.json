@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784790472911,
+            "lastSyncTime": 1784941414726,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\环游手册奖励领取.json",
             "savedViewport": {
-                "x": -3103,
-                "y": 485,
-                "zoom": 0.57
+                "x": -3861,
+                "y": 462,
+                "zoom": 0.66
             },
             "filename": "环游手册奖励领取",
             "version": "v1.7.4"
@@ -62,6 +62,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 4000,
         "next": [
             "有没有一键领取等级奖励-环游手册",
             "返回主界面开始"

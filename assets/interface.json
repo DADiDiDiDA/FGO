@@ -1,11 +1,11 @@
 {
     "interface_version": 2,
-    "name": "MAA-E7-Resonance",
+    "name": "Resonance",
     "description": "《雷索纳斯》自动化脚本 - 整合日常任务流程",
     "contact": "",
     "license": "MIT",
     "welcome": "欢迎使用雷索纳斯自动化助手，只可以完成日常欧~",
-    "version": "1.0.0",
+    "version": "0.1.0",
 
     "controller": [
         {
@@ -38,7 +38,13 @@
             "description": "自动收取并重新派遣已完成的任务"
         },
         {
-            "name": "⚔️ 刷行动汇总",
+            "name": "⚔️ 刷行动汇总第一次",
+            "entry": "每日行动刷体力开始",
+            "description": "自动刷取指定的关卡类型及具体关卡（只用扫荡方式）",
+            "option": ["刷体力关卡类型", "刷体力具体关卡"]
+        },
+        {
+            "name": "⚔️ 刷行动汇总第二次",
             "entry": "每日行动刷体力开始",
             "description": "自动刷取指定的关卡类型及具体关卡（只用扫荡方式）",
             "option": ["刷体力关卡类型", "刷体力具体关卡"]

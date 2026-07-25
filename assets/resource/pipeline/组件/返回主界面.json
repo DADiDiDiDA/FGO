@@ -3,10 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1784941121510,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\组件\\返回主界面.json",
             "savedViewport": {
-                "x": -993,
-                "y": 86,
-                "zoom": 0.76
+                "x": -633,
+                "y": 94,
+                "zoom": 0.66
             },
             "filename": "返回主界面",
             "version": "v1.7.4"
@@ -58,22 +61,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2169,
-                "y": 191
-            }
-        }
-    },
-    "返回主界面开始": {
-        "post_delay": 2000,
-        "next": [
-            "判断是否在主界面",
-            "[JumpBack]有取消按钮",
-            "[JumpBack]按ESc返回主界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1725,
-                "y": 52
+                "x": 2149,
+                "y": 393
             }
         }
     },
@@ -99,6 +88,46 @@
             "position": {
                 "x": 2165,
                 "y": -29
+            }
+        }
+    },
+    "返回主界面开始": {
+        "post_delay": 2000,
+        "next": [
+            "判断是否在主界面",
+            "[JumpBack]有取消按钮",
+            "[JumpBack]每日签到界面退出",
+            "[JumpBack]按ESc返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1723,
+                "y": 50
+            }
+        }
+    },
+    "每日签到界面退出": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    555,
+                    662,
+                    168,
+                    49
+                ],
+                "expected": [
+                    "空白区域"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2170,
+                "y": 176
             }
         }
     }
