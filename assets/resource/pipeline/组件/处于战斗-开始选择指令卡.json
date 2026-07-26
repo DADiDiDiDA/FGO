@@ -1,0 +1,157 @@
+{
+    "$__mpe_config_处于战斗-开始选择指令卡": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1785070370206,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\组件\\处于战斗-开始选择指令卡.json",
+            "savedViewport": {
+                "x": -1681,
+                "y": 226,
+                "zoom": 0.57
+            },
+            "filename": "处于战斗-开始选择指令卡",
+            "version": "v1.7.4"
+        }
+    },
+    "处于战斗选择指令卡开始": {
+        "post_delay": 2000,
+        "timeout": -1,
+        "next": [
+            "战斗已经结束",
+            "[JumpBack]进入指令卡选择界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3314,
+                "y": -47
+            }
+        }
+    },
+    "战斗已经结束": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    512,
+                    25,
+                    248,
+                    70
+                ],
+                "expected": [
+                    "战斗结果"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3736,
+                "y": -316
+            }
+        }
+    },
+    "进入指令卡选择界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1031,
+                    508,
+                    212,
+                    193
+                ],
+                "template": [
+                    "战斗内攻击按钮.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择第一张卡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3769,
+                "y": 36
+            }
+        }
+    },
+    "选择第一张卡": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    59,
+                    520,
+                    155,
+                    95
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "选择第三张卡-第一次_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4093,
+                "y": 0
+            }
+        }
+    },
+    "选择第三张卡-第一次_副本1": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    567,
+                    521,
+                    150,
+                    95
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "选择第五张卡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4392,
+                "y": -48
+            }
+        }
+    },
+    "选择第五张卡": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    1075,
+                    520,
+                    163,
+                    87
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 4776,
+                "y": -90
+            }
+        }
+    }
+}

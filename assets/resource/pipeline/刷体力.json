@@ -1,0 +1,153 @@
+{
+    "$__mpe_config_刷体力": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -3440,
+                "y": 350,
+                "zoom": 0.65
+            },
+            "filename": "刷体力",
+            "version": "v1.7.4"
+        }
+    },
+    "刷体力开始": {
+        "next": [
+            "进入迦勒底之门",
+            "[JumpBack]返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5075,
+                "y": 4
+            }
+        }
+    },
+    "进入迦勒底之门": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    732,
+                    99,
+                    264,
+                    477
+                ],
+                "expected": [
+                    "迦勒底之门"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "开始寻找每日任务",
+            "[JumpBack]滑动屏幕-未找到每日任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5431,
+                "y": -17
+            }
+        }
+    },
+    "开始寻找每日任务": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    911,
+                    96,
+                    202,
+                    620
+                ],
+                "expected": [
+                    "每日任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "新建节点13"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5694,
+                "y": -268
+            }
+        }
+    },
+    "新建节点13": {
+        "next": [
+            "新建节点14"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6024,
+                "y": -179
+            }
+        }
+    },
+    "新建节点14": {
+        "next": [
+            "新建节点15"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6467,
+                "y": -160
+            }
+        }
+    },
+    "新建节点15": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6733,
+                "y": -69
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_刷体力": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5403,
+                "y": 288
+            }
+        }
+    },
+    "滑动屏幕-未找到每日任务": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    939,
+                    662,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        924,
+                        271,
+                        1,
+                        1
+                    ]
+                ],
+                "duration": [
+                    2000
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 5738,
+                "y": 145
+            }
+        }
+    }
+}

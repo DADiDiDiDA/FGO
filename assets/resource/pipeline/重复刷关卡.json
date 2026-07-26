@@ -1,0 +1,241 @@
+{
+    "$__mpe_config_重复刷关卡": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1785070677679,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\重复刷关卡.json",
+            "savedViewport": {
+                "x": -4967,
+                "y": 390,
+                "zoom": 0.7
+            },
+            "filename": "重复刷关卡",
+            "version": "v1.7.4"
+        }
+    },
+    "$__mpe_external_处于战斗选择指令卡开始_重复刷关卡": {
+        "$__mpe_code": {
+            "position": {
+                "x": 7996,
+                "y": -60
+            }
+        }
+    },
+    "判断战斗是否结束-重复刷本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    515,
+                    18,
+                    248,
+                    83
+                ],
+                "expected": [
+                    "战斗结果"
+                ]
+            }
+        },
+        "next": [
+            "寻找上次执行按钮",
+            "[JumpBack]点击下一步-重复刷本",
+            "[JumpBack]是否发出好友申请-重复刷本",
+            "[JumpBack]点击游戏界面-重复刷本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7972,
+                "y": -383
+            }
+        }
+    },
+    "选择开始任务-重复刷本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1241,
+                    697,
+                    1,
+                    1
+                ],
+                "expected": [
+                    "开始任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "判断战斗是否结束-重复刷本",
+            "[JumpBack]处于战斗选择指令卡开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7663,
+                "y": -284
+            }
+        }
+    },
+    "重复刷关卡开始": {
+        "next": [
+            "选择开始任务-重复刷本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7302,
+                "y": -185
+            }
+        }
+    },
+    "点击下一步-重复刷本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1026,
+                    602,
+                    162,
+                    71
+                ],
+                "expected": [
+                    "下一步"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8311,
+                "y": -446
+            }
+        }
+    },
+    "点击游戏界面-重复刷本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    481,
+                    596,
+                    309,
+                    94
+                ],
+                "expected": [
+                    "点击游戏界面"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8313,
+                "y": 6
+            }
+        }
+    },
+    "是否发出好友申请-重复刷本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    246,
+                    578,
+                    160,
+                    73
+                ],
+                "expected": [
+                    "结束"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8329,
+                "y": -218
+            }
+        }
+    },
+    "寻找上次执行按钮": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    627,
+                    97,
+                    66,
+                    595
+                ],
+                "expected": [
+                    "上次执行"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    125,
+                    24,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "选择第一位支援"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8249,
+                "y": -701
+            }
+        }
+    },
+    "选择第一位支援": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    236,
+                    266,
+                    76,
+                    99
+                ],
+                "expected": [
+                    "从者"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -129,
+                    -31,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "选择开始任务-重复刷本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8529,
+                "y": -770
+            }
+        }
+    }
+}

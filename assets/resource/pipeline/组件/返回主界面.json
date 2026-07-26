@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784941121510,
+            "lastSyncTime": 1785068385211,
             "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Resonance\\assets\\resource\\pipeline\\组件\\返回主界面.json",
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\组件\\返回主界面.json",
             "savedViewport": {
-                "x": -633,
-                "y": 94,
-                "zoom": 0.66
+                "x": -602,
+                "y": 145,
+                "zoom": 0.57
             },
             "filename": "返回主界面",
             "version": "v1.7.4"
@@ -17,16 +17,16 @@
     },
     "判断是否在主界面": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
                 "roi": [
-                    1088,
-                    381,
-                    189,
-                    69
+                    1149,
+                    2,
+                    127,
+                    52
                 ],
-                "template": [
-                    "主界面特征.png"
+                "expected": [
+                    "终端"
                 ]
             }
         },
@@ -37,7 +37,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 2147,
-                "y": -354
+                "y": -413
             }
         }
     },
@@ -59,25 +59,51 @@
                 ]
             }
         },
+        "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 2149,
-                "y": 393
+                "x": 2212,
+                "y": 452
             }
         }
     },
-    "有取消按钮": {
+    "是不是返回过头了": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    263,
-                    474,
-                    126,
-                    61
+                    505,
+                    282,
+                    262,
+                    58
                 ],
                 "expected": [
-                    "取消"
+                    "是否退出游戏"
+                ]
+            }
+        },
+        "next": [
+            "返回过头处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2136,
+                "y": -676
+            }
+        }
+    },
+    "点击下一步-返回主界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1026,
+                    602,
+                    162,
+                    71
+                ],
+                "expected": [
+                    "下一步"
                 ]
             }
         },
@@ -86,17 +112,43 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2165,
-                "y": -29
+                "x": 2187,
+                "y": -77
+            }
+        }
+    },
+    "点击游戏界面-返回主界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    481,
+                    596,
+                    309,
+                    94
+                ],
+                "expected": [
+                    "点击游戏界面"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2185,
+                "y": 168
             }
         }
     },
     "返回主界面开始": {
         "post_delay": 2000,
         "next": [
+            "[JumpBack]是不是返回过头了",
             "判断是否在主界面",
-            "[JumpBack]有取消按钮",
-            "[JumpBack]每日签到界面退出",
+            "[JumpBack]点击下一步-返回主界面",
+            "[JumpBack]点击游戏界面-返回主界面",
             "[JumpBack]按ESc返回主界面"
         ],
         "$__mpe_code": {
@@ -106,28 +158,25 @@
             }
         }
     },
-    "每日签到界面退出": {
+    "返回过头处理": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    555,
-                    662,
+                    353,
+                    534,
                     168,
-                    49
+                    55
                 ],
                 "expected": [
-                    "空白区域"
+                    "取消"
                 ]
             }
         },
-        "action": {
-            "type": "Click"
-        },
         "$__mpe_code": {
             "position": {
-                "x": 2170,
-                "y": 176
+                "x": 2494,
+                "y": -624
             }
         }
     }
