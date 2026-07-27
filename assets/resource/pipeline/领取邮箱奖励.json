@@ -1,0 +1,121 @@
+{
+    "$__mpe_config_领取邮箱奖励": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1785114030003,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\领取邮箱奖励.json",
+            "savedViewport": {
+                "x": -5377,
+                "y": 353,
+                "zoom": 0.75
+            },
+            "filename": "领取邮箱奖励",
+            "version": "v1.7.4"
+        }
+    },
+    "$__mpe_external_返回主界面开始_领取邮箱奖励": {
+        "$__mpe_code": {
+            "position": {
+                "x": 8965,
+                "y": 349
+            }
+        }
+    },
+    "全部领取邮箱奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1010,
+                    188,
+                    180,
+                    65
+                ],
+                "expected": [
+                    "全部领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "next": [
+            "确认领取邮箱奖励",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8091,
+                "y": -187
+            }
+        }
+    },
+    "确认领取邮箱奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    751,
+                    534,
+                    167,
+                    57
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8516,
+                "y": -250
+            }
+        }
+    },
+    "进入邮箱界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "邮箱图标.png",
+                    "邮箱图标—正着的.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "next": [
+            "全部领取邮箱奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7760,
+                "y": -352
+            }
+        }
+    },
+    "领取邮箱奖励开始": {
+        "next": [
+            "进入邮箱界面",
+            "[JumpBack]返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7398,
+                "y": -115
+            }
+        }
+    }
+}

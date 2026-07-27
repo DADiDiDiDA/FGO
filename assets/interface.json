@@ -1,30 +1,135 @@
-{
-    "interface_version": 2,
-    "name": "MaaXXX",
-    "description": "这是一个使用 MaaFramework 创建的新项目。",
-    "controller": [
-        {
-            "name": "安卓端",
-            "type": "Adb",
-            "display_short_side": 720
-        }
-    ],
-    "resource": [
-        {
-            "name": "官服",
-            "path": [
-                "./resource"
-            ]
-        }
-    ],
-    "task": [
-        {
-            "name": "刷体力",
-            "entry": "刷体力开始"
-        },
-        {
-            "name": "重复刷关卡",
-            "entry": "重复刷关卡开始"
-        }
-    ]
+{  
+    "interface_version": 2,  
+    "name": "FGO 自动化",  
+    "description": "FGO 日常自动化脚本",  
+    "controller": [  
+        {  
+            "name": "安卓端",  
+            "type": "Adb",  
+            "display_short_side": 720  
+        }  
+    ],  
+    "resource": [  
+        {  
+            "name": "官服",  
+            "path": ["./resource"]  
+        }  
+    ],  
+    "task": [  
+        {  
+            "name": "进入游戏",  
+            "entry": "返回主界面开始",  
+            "default_check": true,  
+            "description": "进入游戏主界面"  
+        },  
+        {  
+            "name": "领取邮箱奖励",  
+            "entry": "领取邮箱奖励开始",  
+            "default_check": true,  
+            "description": "进入邮箱，一键领取所有邮件奖励"  
+        },  
+        {  
+            "name": "刷体力",  
+            "entry": "刷体力开始",  
+            "default_check": true,  
+            "option": ["选择关卡类型"],  
+            "description": "进入迦勒底之门，选择每日任务关卡，消耗体力进行战斗"  
+        },  
+        {  
+            "name": "领取任务奖励",  
+            "entry": "领取任务奖励开始",  
+            "default_check": true,  
+            "description": "进入任务界面，统一领取所有已完成的任务奖励"  
+        },  
+        {  
+            "name": "免费友情点召唤",  
+            "entry": "免费友情点召唤开始",  
+            "default_check": true,  
+            "description": "进入友情点卡池，执行每日免费的10连友情点召唤"  
+        },  
+        {  
+            "name": "重复刷关卡",  
+            "entry": "重复刷关卡开始",  
+            "description": "连续重复刷同一关卡，直到体力不足或任务结束（使用时右下角应该有开始任务字符！）"  
+        }  
+    ],  
+    "option": {  
+        "选择关卡类型": {  
+            "type": "select",  
+            "label": "选择关卡类型",  
+            "description": "选择要刷的关卡类型",  
+            "default_case": "搜集种火",  
+            "cases": [  
+                {  
+                    "name": "搜集种火",  
+                    "label": "搜集种火",  
+                    "option": ["选择种火等级"],  
+                    "pipeline_override": {  
+                        "判断打哪个类型开始": {  
+                            "next": ["搜集种火"]  
+                        }  
+                    }  
+                },  
+                {  
+                    "name": "修炼场",  
+                    "label": "修炼场",  
+                    "option": ["选择修炼场等级"],  
+                    "pipeline_override": {  
+                        "判断打哪个类型开始": {  
+                            "next": ["修炼场"]  
+                        }  
+                    }  
+                },  
+                {  
+                    "name": "宝物库之门",  
+                    "label": "宝物库之门",  
+                    "option": ["选择宝物库等级"],  
+                    "pipeline_override": {  
+                        "判断打哪个类型开始": {  
+                            "next": ["宝物库之门"]  
+                        }  
+                    }  
+                }  
+            ]  
+        },  
+        "选择种火等级": {  
+            "type": "select",  
+            "label": "选择种火等级",  
+            "description": "选择种火关卡推荐等级",  
+            "default_case": "等级40",  
+            "cases": [  
+                {"name": "等级5", "label": "等级 5", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级5", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级10", "label": "等级 10", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级10", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级25", "label": "等级 25", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级25", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级40", "label": "等级 40", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级40", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级60", "label": "等级 60", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级60", "[JumpBack]滑动关卡界面"]}}}  
+            ]  
+        },  
+        "选择修炼场等级": {  
+            "type": "select",  
+            "label": "选择修炼场等级",  
+            "description": "选择修炼场关卡推荐等级",  
+            "default_case": "等级60",  
+            "cases": [  
+                {"name": "等级10", "label": "等级 10", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级10", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级25", "label": "等级 25", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级25", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级40", "label": "等级 40", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级40", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级60", "label": "等级 60", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级60", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级80", "label": "等级 80", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级80", "[JumpBack]滑动关卡界面"]}}}  
+            ]  
+        },  
+        "选择宝物库等级": {  
+            "type": "select",  
+            "label": "选择宝物库等级",  
+            "description": "选择宝物库之门关卡推荐等级",  
+            "default_case": "等级40",  
+            "cases": [  
+                {"name": "等级5", "label": "等级 5", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级5", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级10", "label": "等级 10", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级10", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级25", "label": "等级 25", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级25", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级40", "label": "等级 40", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级40", "[JumpBack]滑动关卡界面"]}}},  
+                {"name": "等级60", "label": "等级 60", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级60", "[JumpBack]滑动关卡界面"]}}}  
+            ]  
+        }  
+    }  
 }

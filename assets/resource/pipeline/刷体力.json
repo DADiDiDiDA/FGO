@@ -3,13 +3,56 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1785116357149,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": -3440,
-                "y": 350,
-                "zoom": 0.65
+                "x": -2474,
+                "y": 272,
+                "zoom": 0.49
             },
             "filename": "刷体力",
             "version": "v1.7.4"
+        }
+    },
+    "$__mpe_external_返回主界面开始_刷体力": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4741,
+                "y": -127
+            }
+        }
+    },
+    "$__mpe_external_选择第一位支援-正常出击_刷体力": {
+        "$__mpe_code": {
+            "position": {
+                "x": 7570,
+                "y": -282
+            }
+        }
+    },
+    "关卡已选择-开始刷本": {
+        "next": [
+            "选择第一位支援-正常出击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7212,
+                "y": -236
+            }
+        }
+    },
+    "判断打哪个等级本开始": {
+        "post_delay": 2000,
+        "next": [
+            "打推荐等级40",
+            "[JumpBack]滑动关卡界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6278,
+                "y": -192
+            }
         }
     },
     "刷体力开始": {
@@ -19,38 +62,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5075,
-                "y": 4
-            }
-        }
-    },
-    "进入迦勒底之门": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    732,
-                    99,
-                    264,
-                    477
-                ],
-                "expected": [
-                    "迦勒底之门"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "开始寻找每日任务",
-            "[JumpBack]滑动屏幕-未找到每日任务"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5431,
-                "y": -17
+                "x": 4370,
+                "y": -239
             }
         }
     },
@@ -73,50 +86,182 @@
             "type": "Click"
         },
         "next": [
-            "新建节点13"
+            "回到关卡最上端"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5694,
-                "y": -268
+                "x": 5051,
+                "y": -678
             }
         }
     },
-    "新建节点13": {
+    "打推荐等级10": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1120,
+                    101,
+                    58,
+                    540
+                ],
+                "expected": [
+                    "等级10"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
         "next": [
-            "新建节点14"
+            "关卡已选择-开始刷本"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6024,
-                "y": -179
+                "x": 6682,
+                "y": -286
             }
         }
     },
-    "新建节点14": {
+    "打推荐等级25": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1120,
+                    101,
+                    58,
+                    540
+                ],
+                "expected": [
+                    "等级25"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
         "next": [
-            "新建节点15"
+            "关卡已选择-开始刷本"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6467,
-                "y": -160
+                "x": 6677,
+                "y": -67
             }
         }
     },
-    "新建节点15": {
+    "打推荐等级40": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1120,
+                    101,
+                    58,
+                    540
+                ],
+                "expected": [
+                    "等级40"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关卡已选择-开始刷本"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 6733,
-                "y": -69
+                "x": 6679,
+                "y": 176
             }
         }
     },
-    "$__mpe_external_返回主界面开始_刷体力": {
+    "打推荐等级5": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1120,
+                    101,
+                    58,
+                    540
+                ],
+                "expected": [
+                    "等级5"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关卡已选择-开始刷本"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 5403,
-                "y": 288
+                "x": 6681,
+                "y": -559
+            }
+        }
+    },
+    "打推荐等级60": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1120,
+                    101,
+                    58,
+                    540
+                ],
+                "expected": [
+                    "等级60"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关卡已选择-开始刷本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6696,
+                "y": 424
+            }
+        }
+    },
+    "滑动关卡界面": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    957,
+                    580,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        939,
+                        211,
+                        1,
+                        1
+                    ]
+                ],
+                "duration": [
+                    1000
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 6134,
+                "y": 171
             }
         }
     },
@@ -145,8 +290,237 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 5738,
-                "y": 145
+                "x": 5168,
+                "y": -197
+            }
+        }
+    },
+    "进入迦勒底之门": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    732,
+                    99,
+                    264,
+                    477
+                ],
+                "expected": [
+                    "迦勒底之门"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "开始寻找每日任务",
+            "[JumpBack]滑动屏幕-未找到每日任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4775,
+                "y": -564
+            }
+        }
+    },
+    "判断打哪个类型开始": {
+        "post_delay": 3000,
+        "next": [
+            "宝物库之门",
+            "[JumpBack]滑动关卡界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5500,
+                "y": -542
+            }
+        }
+    },
+    "搜集种火": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    840,
+                    89,
+                    104,
+                    591
+                ],
+                "expected": [
+                    "搜集种火"
+                ],
+                "order_by": "Vertical"
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "end": [
+                    [
+                        911,
+                        146,
+                        1,
+                        1
+                    ]
+                ],
+                "duration": [
+                    1500
+                ]
+            }
+        },
+        "next": [
+            "判断打哪个等级本开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5956,
+                "y": -1032
+            }
+        }
+    },
+    "修炼场": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    848,
+                    101,
+                    116,
+                    610
+                ],
+                "expected": [
+                    "修炼场"
+                ],
+                "order_by": "Vertical"
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "end": [
+                    [
+                        911,
+                        146,
+                        1,
+                        1
+                    ]
+                ],
+                "duration": [
+                    1500
+                ]
+            }
+        },
+        "next": [
+            "判断打哪个等级本开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5955,
+                "y": -741
+            }
+        }
+    },
+    "宝物库之门": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    814,
+                    123,
+                    102,
+                    573
+                ],
+                "expected": [
+                    "宝物库之门"
+                ],
+                "order_by": "Vertical"
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "end": [
+                    [
+                        911,
+                        146,
+                        1,
+                        1
+                    ]
+                ],
+                "duration": [
+                    1500
+                ]
+            }
+        },
+        "next": [
+            "判断打哪个等级本开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5955,
+                "y": -442
+            }
+        }
+    },
+    "回到关卡最上端": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    961,
+                    120,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        952,
+                        656,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "repeat": 5,
+        "repeat_delay": 400,
+        "next": [
+            "判断打哪个类型开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5328,
+                "y": -923
+            }
+        }
+    },
+    "打推荐等级80": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1120,
+                    101,
+                    58,
+                    540
+                ],
+                "expected": [
+                    "等级80"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关卡已选择-开始刷本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6733,
+                "y": 701
             }
         }
     }
