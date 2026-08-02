@@ -1,0 +1,138 @@
+{
+    "$__mpe_config_自动编队": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1785503501060,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\组件\\自动编队.json",
+            "savedViewport": {
+                "x": -5442,
+                "y": -232,
+                "zoom": 0.86
+            },
+            "filename": "自动编队",
+            "version": "v1.7.4"
+        }
+    },
+    "关闭编队提示-自动编队": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    563,
+                    575,
+                    162,
+                    55
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 6805,
+                "y": 528
+            }
+        }
+    },
+    "确认自动编队": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    834,
+                    487,
+                    196,
+                    150
+                ],
+                "expected": [
+                    "自动编成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认自动编队结果"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7051,
+                "y": 297
+            }
+        }
+    },
+    "确认自动编队结果": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1114,
+                    638,
+                    108,
+                    63
+                ],
+                "expected": [
+                    "决定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 7522,
+                "y": 376
+            }
+        }
+    },
+    "自动编队": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    264,
+                    644,
+                    67,
+                    71
+                ],
+                "expected": [
+                    "自动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认自动编队"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6719,
+                "y": 246
+            }
+        }
+    },
+    "自动编队开始": {
+        "next": [
+            "自动编队",
+            "确认自动编队",
+            "[JumpBack]关闭编队提示-自动编队"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6384,
+                "y": 476
+            }
+        }
+    }
+}

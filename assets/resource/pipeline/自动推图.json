@@ -1,0 +1,631 @@
+{
+    "$__mpe_config_自动推图": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1785482146868,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\自动推图.json",
+            "savedViewport": {
+                "x": -555,
+                "y": -1397,
+                "zoom": 0.57
+            },
+            "filename": "自动推图",
+            "version": "v1.7.4"
+        }
+    },
+    "$__mpe_external_助战角色选择开始_自动推图": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2248,
+                "y": 382
+            }
+        }
+    },
+    "$__mpe_external_处于战斗选择指令卡开始_自动推图": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2601,
+                "y": 2537
+            }
+        }
+    },
+    "$__mpe_external_自动编队开始_自动推图": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2460,
+                "y": 1499
+            }
+        }
+    },
+    "上部区域下一步处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    496,
+                    612,
+                    739,
+                    90
+                ],
+                "expected": [
+                    "下一步"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1839,
+                "y": 1296
+            }
+        }
+    },
+    "下部区域下一步处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    177,
+                    470,
+                    890,
+                    178
+                ],
+                "expected": [
+                    "开始",
+                    "关闭",
+                    "结束",
+                    "点击屏幕",
+                    "重试",
+                    "任务开始",
+                    "自动编成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1800,
+                "y": 2000
+            }
+        }
+    },
+    "不需要自动战斗_自动推图": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2285,
+                "y": 2337
+            }
+        }
+    },
+    "关卡特殊需求说明确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    769,
+                    537,
+                    144,
+                    52
+                ],
+                "expected": [
+                    "开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "关卡需要编队说明确认",
+            "选择关卡结束-自动推图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2144,
+                "y": -546
+            }
+        }
+    },
+    "关卡需要编队说明确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    769,
+                    537,
+                    144,
+                    52
+                ],
+                "expected": [
+                    "开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "选择关卡结束-自动推图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2577,
+                "y": -568
+            }
+        }
+    },
+    "关闭公告栏": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1150,
+                    2,
+                    128,
+                    94
+                ],
+                "template": [
+                    "叉号.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1811,
+                "y": 994
+            }
+        }
+    },
+    "关闭需要选择角色-助战角色选择_自动推图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    580,
+                    575,
+                    120,
+                    52
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "自动编队开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2200,
+                "y": 1499
+            }
+        }
+    },
+    "判断是否在战斗内-自动推图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1049,
+                    531,
+                    175,
+                    149
+                ],
+                "template": [
+                    "战斗内攻击按钮.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "判断是否需要自动战斗_自动推图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1730,
+                "y": 2505
+            }
+        }
+    },
+    "判断是否需要自动战斗_自动推图": {
+        "next": [
+            "不需要自动战斗_自动推图",
+            "需要自动战斗_自动推图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1992,
+                "y": 2415
+            }
+        }
+    },
+    "寻找下一个关卡-自动推图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    140,
+                    7,
+                    1118,
+                    577
+                ],
+                "template": [
+                    "下一关图标1.png",
+                    "下一关图标2.png",
+                    "下一关-小.png",
+                    "下一关图标超小.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    120,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "关卡特殊需求说明确认",
+            "选择关卡结束-自动推图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1804,
+                "y": -289
+            }
+        }
+    },
+    "寻找下一个关卡-自动推图-关卡列表": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    612,
+                    67,
+                    188,
+                    113
+                ],
+                "template": [
+                    "下一关图标1.png",
+                    "下一关图标2.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    120,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "关卡特殊需求说明确认",
+            "选择关卡结束-自动推图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1526,
+                "y": -670
+            }
+        }
+    },
+    "底部区域下一步处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    496,
+                    612,
+                    739,
+                    90
+                ],
+                "expected": [
+                    "战斗开始",
+                    "开始任务",
+                    "下一步",
+                    "游戏界面",
+                    "决定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1717,
+                "y": 3296
+            }
+        }
+    },
+    "推图开始": {
+        "next": [
+            "推图选择节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 763,
+                "y": 674
+            }
+        }
+    },
+    "推图选择节点": {
+        "post_delay": 2000,
+        "timeout": -1,
+        "rate_limit": 500,
+        "next": [
+            "[JumpBack]寻找下一个关卡-自动推图-关卡列表",
+            "[JumpBack]寻找下一个关卡-自动推图",
+            "[JumpBack]是不是助战选择-自动推图",
+            "[JumpBack]是不是要跳过剧情-自动推图",
+            "[JumpBack]关闭公告栏",
+            "[JumpBack]上部区域下一步处理",
+            "[JumpBack]需要选择角色-助战角色选择_自动推图",
+            "[JumpBack]错误处理-数据错误",
+            "[JumpBack]下部区域下一步处理",
+            "[JumpBack]判断是否在战斗内-自动推图",
+            "[JumpBack]有自动编队功能确认-助战角色选择_自动推图",
+            "[JumpBack]底部区域下一步处理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1129,
+                "y": 396
+            }
+        }
+    },
+    "是不是助战选择-自动推图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1017,
+                    7,
+                    259,
+                    66
+                ],
+                "expected": [
+                    "助战选择"
+                ]
+            }
+        },
+        "post_delay": 1500,
+        "next": [
+            "助战角色选择开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1815,
+                "y": 159
+            }
+        }
+    },
+    "是不是有对话选择": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    500,
+                    101,
+                    199,
+                    186
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认要跳过剧情结束-自动推图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2385,
+                "y": 828
+            }
+        }
+    },
+    "是不是要跳过剧情-自动推图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1125,
+                    7,
+                    150,
+                    66
+                ],
+                "expected": [
+                    "跳过"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "确认要跳过剧情-自动推图",
+            "是不是有对话选择",
+            "确认要跳过剧情结束-自动推图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1817,
+                "y": 659
+            }
+        }
+    },
+    "有自动编队功能确认-助战角色选择_自动推图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    856,
+                    578,
+                    160,
+                    49
+                ],
+                "expected": [
+                    "自动编成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1745,
+                "y": 2800
+            }
+        }
+    },
+    "确认要跳过剧情-自动推图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    780,
+                    533,
+                    87,
+                    53
+                ],
+                "expected": [
+                    "是"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认要跳过剧情结束-自动推图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2508,
+                "y": 563
+            }
+        }
+    },
+    "确认要跳过剧情结束-自动推图": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2807,
+                "y": 1227
+            }
+        }
+    },
+    "选择关卡结束-自动推图": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2815,
+                "y": 146
+            }
+        }
+    },
+    "错误处理-数据错误": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    523,
+                    457,
+                    455,
+                    155
+                ],
+                "expected": [
+                    "退出",
+                    "进入",
+                    "任务开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1814,
+                "y": 1741
+            }
+        }
+    },
+    "需要自动战斗_自动推图": {
+        "next": [
+            "处于战斗选择指令卡开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2281,
+                "y": 2580
+            }
+        }
+    },
+    "需要选择角色-助战角色选择_自动推图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    513,
+                    55,
+                    256,
+                    79
+                ],
+                "expected": [
+                    "编成条件",
+                    "编制限制",
+                    "成员不足"
+                ]
+            }
+        },
+        "next": [
+            "关闭需要选择角色-助战角色选择_自动推图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1880,
+                "y": 1484
+            }
+        }
+    }
+}

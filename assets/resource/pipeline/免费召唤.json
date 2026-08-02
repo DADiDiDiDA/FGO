@@ -1,21 +1,21 @@
 {
-    "$__mpe_config_免费友情点召唤": {
+    "$__mpe_config_免费召唤": {
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785632897409,
+            "lastSyncTime": 1785633124278,
             "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\免费友情点召唤.json",
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\免费召唤.json",
             "savedViewport": {
-                "x": -7972,
-                "y": 250,
-                "zoom": 0.75
+                "x": -11197,
+                "y": 282,
+                "zoom": 1
             },
-            "filename": "免费友情点召唤",
+            "filename": "免费召唤",
             "version": "v1.7.4"
         }
     },
-    "$__mpe_external_返回主界面开始_免费友情点召唤": {
+    "$__mpe_external_返回主界面开始_免费召唤": {
         "$__mpe_code": {
             "position": {
                 "x": 12078,
@@ -23,9 +23,9 @@
             }
         }
     },
-    "免费友情点召唤开始": {
+    "免费剧情召唤开始": {
         "next": [
-            "进入选择菜单-友情召唤"
+            "进入选择菜单-免费召唤"
         ],
         "$__mpe_code": {
             "position": {
@@ -34,23 +34,23 @@
             }
         }
     },
-    "判断是否为友情卡池-友情召唤": {
+    "判断是否为友情卡池-免费召唤": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    466,
-                    350,
-                    356,
-                    94
+                    753,
+                    269,
+                    100,
+                    63
                 ],
                 "expected": [
-                    "友情点召唤"
+                    "剧情"
                 ]
             }
         },
         "next": [
-            "判断每日免费召唤剩余次数-友情召唤",
+            "判断每日免费召唤剩余次数-免费召唤",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -60,18 +60,18 @@
             }
         }
     },
-    "判断每日免费召唤剩余次数-友情召唤": {
+    "判断每日免费召唤剩余次数-免费召唤": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    551,
-                    489,
-                    188,
-                    60
+                    342,
+                    494,
+                    218,
+                    70
                 ],
                 "expected": [
-                    "免费召唤10次"
+                    "免费召唤"
                 ]
             }
         },
@@ -79,7 +79,7 @@
             "type": "Click"
         },
         "next": [
-            "确认免费召唤开始-友情召唤"
+            "确认免费召唤开始-免费召唤"
         ],
         "$__mpe_code": {
             "position": {
@@ -88,7 +88,7 @@
             }
         }
     },
-    "召唤界面结束了吗-友情召唤": {
+    "召唤界面结束了吗-免费召唤": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -116,7 +116,7 @@
             }
         }
     },
-    "疯狂点击空白处-友情召唤": {
+    "疯狂点击空白处-免费召唤": {
         "recognition": {
             "type": "DirectHit",
             "param": {
@@ -146,7 +146,7 @@
             }
         }
     },
-    "确认免费召唤开始-友情召唤": {
+    "确认免费召唤开始-免费召唤": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -165,8 +165,8 @@
             "type": "Click"
         },
         "next": [
-            "召唤界面结束了吗-友情召唤",
-            "[JumpBack]疯狂点击空白处-友情召唤"
+            "召唤界面结束了吗-免费召唤",
+            "[JumpBack]疯狂点击空白处-免费召唤"
         ],
         "$__mpe_code": {
             "position": {
@@ -175,7 +175,7 @@
             }
         }
     },
-    "进入上一个卡池-友情召唤": {
+    "进入上一个卡池-免费召唤": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -202,7 +202,7 @@
             }
         }
     },
-    "进入召唤菜单-友情召唤": {
+    "进入召唤菜单-免费召唤": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -221,8 +221,8 @@
             "type": "Click"
         },
         "next": [
-            "判断是否为友情卡池-友情召唤",
-            "[JumpBack]进入上一个卡池-友情召唤"
+            "判断是否为友情卡池-免费召唤",
+            "[JumpBack]进入上一个卡池-免费召唤"
         ],
         "$__mpe_code": {
             "position": {
@@ -231,7 +231,7 @@
             }
         }
     },
-    "进入选择菜单-友情召唤": {
+    "进入选择菜单-免费召唤": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -250,7 +250,7 @@
             "type": "Click"
         },
         "next": [
-            "进入召唤菜单-友情召唤"
+            "进入召唤菜单-免费召唤"
         ],
         "$__mpe_code": {
             "position": {

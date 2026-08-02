@@ -3,19 +3,102 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785115299331,
+            "lastSyncTime": 1785630387171,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\组件\\返回主界面.json",
             "savedViewport": {
-                "x": -340,
-                "y": 475,
-                "zoom": 0.43
+                "x": -705,
+                "y": 387,
+                "zoom": 0.66
             },
             "filename": "返回主界面",
             "version": "v1.7.4"
         }
     },
-    "已在主界面任务结束": {
+    "判断是否在主界面-方法一": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    208,
+                    609,
+                    50,
+                    39
+                ],
+                "expected": [
+                    "等级"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2150,
+                "y": -952
+            }
+        }
+    },
+    "判断是否在主界面-方法二": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    20,
+                    15,
+                    142,
+                    60
+                ],
+                "expected": [
+                    "通知"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2479,
+                "y": -960
+            }
+        }
+    },
+    "判断是否在主界面-汇总-返回主界面": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "判断是否在主界面-方法一",
+                    "判断是否在主界面-方法二"
+                ]
+            }
+        },
+        "next": [
+            "已在主界面任务结束-返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2187,
+                "y": -274
+            }
+        }
+    },
+    "右上角叉号-返回主界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "右上角叉号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2195,
+                "y": 913
+            }
+        }
+    },
+    "已在主界面任务结束-返回主界面": {
         "$__mpe_code": {
             "position": {
                 "x": 2495,
@@ -23,7 +106,7 @@
             }
         }
     },
-    "按ESc返回主界面": {
+    "按ESc返回主界面-返回主界面": {
         "action": {
             "type": "ClickKey",
             "param": {
@@ -36,12 +119,12 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 2189,
-                "y": 767
+                "x": 2151,
+                "y": 1192
             }
         }
     },
-    "是不是返回过头了": {
+    "是不是返回过头了-返回主界面": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -57,7 +140,7 @@
             }
         },
         "next": [
-            "返回过头处理"
+            "返回过头处理-返回主界面"
         ],
         "$__mpe_code": {
             "position": {
@@ -116,15 +199,15 @@
             }
         }
     },
-    "确认进入游戏": {
+    "确认进入游戏-返回主界面": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    536,
-                    507,
-                    207,
-                    66
+                    533,
+                    505,
+                    215,
+                    178
                 ],
                 "expected": [
                     "点击屏幕"
@@ -134,6 +217,7 @@
         "action": {
             "type": "Click"
         },
+        "rate_limit": 500,
         "$__mpe_code": {
             "position": {
                 "x": 2203,
@@ -141,7 +225,7 @@
             }
         }
     },
-    "签到界面关闭": {
+    "签到界面关闭-返回主界面": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -161,8 +245,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2200,
-                "y": 586
+                "x": 2139,
+                "y": -450
             }
         }
     },
@@ -170,13 +254,14 @@
         "post_delay": 2000,
         "timeout": 60000,
         "next": [
-            "[JumpBack]是不是返回过头了",
-            "判断是否在主界面-汇总",
+            "[JumpBack]是不是返回过头了-返回主界面",
+            "[JumpBack]签到界面关闭-返回主界面",
+            "判断是否在主界面-汇总-返回主界面",
             "[JumpBack]点击下一步-返回主界面",
             "[JumpBack]点击游戏界面-返回主界面",
-            "[JumpBack]确认进入游戏",
-            "[JumpBack]签到界面关闭",
-            "[JumpBack]按ESc返回主界面"
+            "[JumpBack]确认进入游戏-返回主界面",
+            "[JumpBack]右上角叉号-返回主界面",
+            "[JumpBack]按ESc返回主界面-返回主界面"
         ],
         "$__mpe_code": {
             "position": {
@@ -185,7 +270,7 @@
             }
         }
     },
-    "返回过头处理": {
+    "返回过头处理-返回主界面": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -208,70 +293,6 @@
             "position": {
                 "x": 2494,
                 "y": -624
-            }
-        }
-    },
-    "判断是否在主界面-汇总": {
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "判断是否在主界面-方法一",
-                    "判断是否在主界面-方法二"
-                ]
-            }
-        },
-        "next": [
-            "已在主界面任务结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2158,
-                "y": -320
-            }
-        }
-    },
-    "判断是否在主界面-方法一": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    208,
-                    609,
-                    50,
-                    39
-                ],
-                "expected": [
-                    "等级"
-                ]
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 2150,
-                "y": -952
-            }
-        }
-    },
-    "判断是否在主界面-方法二": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1146,
-                    4,
-                    131,
-                    52
-                ],
-                "expected": [
-                    "终端"
-                ]
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 2479,
-                "y": -960
             }
         }
     }

@@ -1,0 +1,291 @@
+{
+    "$__mpe_config_助战角色选择": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -1658,
+                "y": 0,
+                "zoom": 0.5
+            },
+            "filename": "助战角色选择",
+            "version": "v1.7.4"
+        }
+    },
+    "$__mpe_sticker_便签_助战角色选择": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4054,
+                "y": 166
+            },
+            "content": "该组件目的是：处理主线剧情中，前几位支援角色为系统角色的情况；一般用不到。\n只在自动推图使用",
+            "color": "yellow",
+            "width": 229,
+            "height": 138
+        }
+    },
+    "关闭需要选择角色-助战角色选择": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    580,
+                    575,
+                    120,
+                    52
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "自动编队开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6024,
+                "y": 426
+            }
+        }
+    },
+    "助战角色选择开始": {
+        "next": [
+            "是助战选择-选择助战",
+            "[JumpBack]滑动选择助战-选择助战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3376,
+                "y": 531
+            }
+        }
+    },
+    "助战角色选择结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5730,
+                "y": 982
+            }
+        }
+    },
+    "是助战选择-选择助战": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    817,
+                    190,
+                    260,
+                    527
+                ],
+                "expected": [
+                    "小时前",
+                    "分钟前",
+                    "最后登录"
+                ],
+                "order_by": "Vertical",
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1500,
+        "next": [
+            "有编队需求确认-助战角色选择",
+            "编队确认出击开始",
+            "助战角色选择结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3747,
+                "y": 220
+            }
+        }
+    },
+    "有编队需求确认-助战角色选择": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    512,
+                    555,
+                    272,
+                    97
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1500,
+        "next": [
+            "有自动编队功能确认-助战角色选择",
+            "编队确认出击开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4235,
+                "y": 105
+            }
+        }
+    },
+    "有自动编队功能确认-助战角色选择": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    856,
+                    578,
+                    160,
+                    49
+                ],
+                "expected": [
+                    "自动编成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确认自动编队结果-助战角色确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4630,
+                "y": 75
+            }
+        }
+    },
+    "滑动选择助战-选择助战": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1017,
+                    631,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        1033,
+                        227,
+                        1,
+                        1
+                    ]
+                ],
+                "duration": [
+                    1000
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3785,
+                "y": 642
+            }
+        }
+    },
+    "确认自动编队结果-助战角色确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1123,
+                    644,
+                    84,
+                    49
+                ],
+                "expected": [
+                    "决定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "编队确认出击开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4948,
+                "y": 271
+            }
+        }
+    },
+    "编队确认出击开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1099,
+                    639,
+                    131,
+                    63
+                ],
+                "expected": [
+                    "开始任务",
+                    "战斗开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1500,
+        "next": [
+            "[JumpBack]需要选择角色-助战角色选择",
+            "助战角色选择结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5352,
+                "y": 629
+            }
+        }
+    },
+    "需要选择角色-助战角色选择": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    432,
+                    332,
+                    417,
+                    53
+                ],
+                "expected": [
+                    "请从持有从者中选择",
+                    "持有从者中"
+                ]
+            }
+        },
+        "next": [
+            "关闭需要选择角色-助战角色选择"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5722,
+                "y": 459
+            }
+        }
+    },
+    "$__mpe_external_自动编队开始_助战角色选择": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6284,
+                "y": 426
+            }
+        }
+    }
+}

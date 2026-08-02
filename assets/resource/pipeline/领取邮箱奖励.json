@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785114030003,
+            "lastSyncTime": 1785550347419,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\领取邮箱奖励.json",
             "savedViewport": {
-                "x": -5377,
-                "y": 353,
-                "zoom": 0.75
+                "x": -4837,
+                "y": 316,
+                "zoom": 0.66
             },
             "filename": "领取邮箱奖励",
             "version": "v1.7.4"
@@ -95,7 +95,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 5000,
+        "post_delay": 3000,
         "next": [
             "全部领取邮箱奖励"
         ],

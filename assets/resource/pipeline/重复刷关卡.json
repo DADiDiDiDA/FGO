@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785112204744,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\重复刷关卡.json",
             "savedViewport": {
-                "x": -3315,
-                "y": 565,
-                "zoom": 0.47
+                "x": -4063,
+                "y": 345,
+                "zoom": 0.57
             },
             "filename": "重复刷关卡",
             "version": "v1.7.4"
@@ -159,7 +156,7 @@
             }
         }
     },
-    "新建节点18_副本8": {
+    "获得战利品-重复刷本": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -275,7 +272,7 @@
                     94
                 ],
                 "expected": [
-                    "点击游戏界面"
+                    "游戏界面"
                 ]
             }
         },
@@ -321,7 +318,7 @@
         "next": [
             "判断战斗是否结束-重复刷本-方法一",
             "点击游戏界面-重复刷本_方法2",
-            "新建节点18_副本8",
+            "获得战利品-重复刷本",
             "体力不足-重复刷本",
             "任务已结束",
             "[JumpBack]处于战斗选择指令卡开始"

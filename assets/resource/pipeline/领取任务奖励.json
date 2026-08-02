@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785115219419,
+            "lastSyncTime": 1785562193878,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\领取任务奖励.json",
             "savedViewport": {
-                "x": -6941,
-                "y": 178,
-                "zoom": 0.86
+                "x": -4250,
+                "y": 84,
+                "zoom": 0.57
             },
             "filename": "领取任务奖励",
             "version": "v1.7.4"
@@ -18,8 +18,58 @@
     "$__mpe_external_返回主界面开始_领取任务奖励": {
         "$__mpe_code": {
             "position": {
-                "x": 8745,
-                "y": 369
+                "x": 9044,
+                "y": 501
+            }
+        }
+    },
+    "任务奖励领取确认1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    481,
+                    507,
+                    309,
+                    183
+                ],
+                "expected": [
+                    "关闭",
+                    "点击游戏界面",
+                    "点击屏幕"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2500,
+        "$__mpe_code": {
+            "position": {
+                "x": 9483,
+                "y": -452
+            }
+        }
+    },
+    "任务奖励领取结束": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    630,
+                    190,
+                    139,
+                    50
+                ],
+                "expected": [
+                    "已完成任务"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 9596,
+                "y": 92
             }
         }
     },
@@ -58,8 +108,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8752,
-                "y": -35
+                "x": 8702,
+                "y": -197
             }
         }
     },
@@ -82,40 +132,14 @@
             "type": "Click"
         },
         "next": [
-            "确认领取任务奖励"
+            "[JumpBack]任务奖励领取确认1",
+            "[JumpBack]开始领取任务奖励-领取任务奖励",
+            "任务奖励领取结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9012,
-                "y": -35
-            }
-        }
-    },
-    "确认领取任务奖励": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    771,
-                    602,
-                    123,
-                    47
-                ],
-                "expected": [
-                    "领取"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "领取任务奖励二次确认"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 9272,
-                "y": -35
+                "x": 9086,
+                "y": -108
             }
         }
     },
@@ -149,32 +173,6 @@
             }
         }
     },
-    "领取任务奖励二次确认": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    567,
-                    539,
-                    146,
-                    49
-                ],
-                "expected": [
-                    "关闭"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": 9532,
-                "y": -35
-            }
-        }
-    },
     "领取任务奖励开始": {
         "next": [
             "进入任务界面"
@@ -183,6 +181,32 @@
             "position": {
                 "x": 8017,
                 "y": 53
+            }
+        }
+    },
+    "开始领取任务奖励-领取任务奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    769,
+                    596,
+                    129,
+                    50
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2500,
+        "$__mpe_code": {
+            "position": {
+                "x": 9657,
+                "y": -208
             }
         }
     }

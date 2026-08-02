@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785112132180,
+            "lastSyncTime": 1785209646023,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\组件\\处于战斗-开始选择指令卡.json",
             "savedViewport": {
-                "x": -1779,
-                "y": 265,
-                "zoom": 0.54
+                "x": -2640,
+                "y": 80,
+                "zoom": 0.75
             },
             "filename": "处于战斗-开始选择指令卡",
             "version": "v1.7.4"
@@ -21,7 +21,7 @@
         "next": [
             "战斗已经结束-识别1",
             "战斗已经结束-识别2",
-            "战利品界面判断",
+            "战利品界面判断-识别3",
             "[JumpBack]进入指令卡选择界面"
         ],
         "$__mpe_code": {
@@ -31,7 +31,7 @@
             }
         }
     },
-    "战利品界面判断": {
+    "战利品界面判断-识别3": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -116,53 +116,24 @@
             "type": "Click"
         },
         "next": [
-            "选择第一张卡"
+            "指令卡1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3766,
-                "y": 225
+                "x": 3802,
+                "y": 234
             }
         }
     },
-    "选择第一张卡": {
+    "指令卡1": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    59,
-                    520,
-                    155,
-                    95
-                ],
-                "expected": [
-                    "击"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 500,
-        "next": [
-            "选择第三张卡-第一次_副本1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4113,
-                "y": 114
-            }
-        }
-    },
-    "选择第三张卡-第一次_副本1": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    567,
+                    64,
                     521,
                     150,
-                    95
+                    92
                 ],
                 "expected": [
                     "击"
@@ -172,26 +143,53 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 500,
         "next": [
-            "选择第五张卡"
+            "指令卡3"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4406,
-                "y": 148
+                "x": 4062,
+                "y": 234
             }
         }
     },
-    "选择第五张卡": {
+    "指令卡3": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    1075,
-                    520,
-                    163,
-                    87
+                    580,
+                    528,
+                    136,
+                    94
+                ],
+                "expected": [
+                    "击"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "指令卡5"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4363,
+                "y": 240
+            }
+        }
+    },
+    "指令卡5": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1088,
+                    526,
+                    152,
+                    89
                 ],
                 "expected": [
                     "击"
@@ -204,8 +202,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 4776,
-                "y": -90
+                "x": 4676,
+                "y": 222
             }
         }
     }
