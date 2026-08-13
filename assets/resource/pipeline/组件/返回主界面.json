@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785630387171,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\组件\\返回主界面.json",
             "savedViewport": {
-                "x": -705,
-                "y": 387,
-                "zoom": 0.66
+                "x": -682,
+                "y": -403,
+                "zoom": 0.65
             },
             "filename": "返回主界面",
             "version": "v1.7.4"
@@ -17,23 +14,50 @@
     },
     "判断是否在主界面-方法一": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    208,
-                    609,
-                    50,
-                    39
+                    210,
+                    610,
+                    51,
+                    37
                 ],
-                "expected": [
-                    "等级"
+                "template": [
+                    "等级图标.png"
                 ]
             }
         },
+        "post_delay": 2500,
+        "next": [
+            "判断是否在主界面-方法二"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 2150,
-                "y": -952
+                "x": 2663,
+                "y": -1148
+            }
+        }
+    },
+    "判断是否在主界面-方法三": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1130,
+                    623,
+                    116,
+                    53
+                ],
+                "expected": [
+                    "菜单"
+                ]
+            }
+        },
+        "post_delay": 2500,
+        "$__mpe_code": {
+            "position": {
+                "x": 3327,
+                "y": -1144
             }
         }
     },
@@ -52,30 +76,14 @@
                 ]
             }
         },
-        "$__mpe_code": {
-            "position": {
-                "x": 2479,
-                "y": -960
-            }
-        }
-    },
-    "判断是否在主界面-汇总-返回主界面": {
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "判断是否在主界面-方法一",
-                    "判断是否在主界面-方法二"
-                ]
-            }
-        },
+        "post_delay": 2000,
         "next": [
-            "已在主界面任务结束-返回主界面"
+            "判断是否在主界面-方法三"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2187,
-                "y": -274
+                "x": 2995,
+                "y": -1089
             }
         }
     },
@@ -93,16 +101,41 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2195,
-                "y": 913
+                "x": 2180,
+                "y": 735
+            }
+        }
+    },
+    "左上角关闭按钮": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    26,
+                    15,
+                    142,
+                    53
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2187,
+                "y": 511
             }
         }
     },
     "已在主界面任务结束-返回主界面": {
         "$__mpe_code": {
             "position": {
-                "x": 2495,
-                "y": -309
+                "x": 2636,
+                "y": -156
             }
         }
     },
@@ -119,8 +152,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 2151,
-                "y": 1192
+                "x": 2174,
+                "y": 1168
             }
         }
     },
@@ -144,8 +177,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2136,
-                "y": -676
+                "x": 2128,
+                "y": -748
             }
         }
     },
@@ -169,8 +202,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2187,
-                "y": -77
+                "x": 2181,
+                "y": 104
             }
         }
     },
@@ -180,48 +213,24 @@
             "param": {
                 "roi": [
                     481,
-                    596,
-                    309,
-                    94
-                ],
-                "expected": [
-                    "点击游戏界面"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 2185,
-                "y": 168
-            }
-        }
-    },
-    "确认进入游戏-返回主界面": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    533,
                     505,
-                    215,
-                    178
+                    309,
+                    185
                 ],
                 "expected": [
-                    "点击屏幕"
+                    "点击游戏界面",
+                    "点击屏幕",
+                    "开始更新"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "rate_limit": 500,
         "$__mpe_code": {
             "position": {
-                "x": 2203,
-                "y": 387
+                "x": 2189,
+                "y": 311
             }
         }
     },
@@ -230,10 +239,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    554,
-                    536,
-                    181,
-                    53
+                    154,
+                    526,
+                    1018,
+                    116
                 ],
                 "expected": [
                     "关闭"
@@ -245,22 +254,24 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2139,
-                "y": -450
+                "x": 2136,
+                "y": -511
             }
         }
     },
     "返回主界面开始": {
         "post_delay": 2000,
         "timeout": 60000,
+        "rate_limit": 500,
         "next": [
             "[JumpBack]是不是返回过头了-返回主界面",
             "[JumpBack]签到界面关闭-返回主界面",
-            "判断是否在主界面-汇总-返回主界面",
+            "判断是否在主界面",
             "[JumpBack]点击下一步-返回主界面",
             "[JumpBack]点击游戏界面-返回主界面",
-            "[JumpBack]确认进入游戏-返回主界面",
+            "[JumpBack]左上角关闭按钮",
             "[JumpBack]右上角叉号-返回主界面",
+            "[JumpBack]需要更新资料",
             "[JumpBack]按ESc返回主界面-返回主界面"
         ],
         "$__mpe_code": {
@@ -291,8 +302,54 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 2494,
-                "y": -624
+                "x": 2502,
+                "y": -753
+            }
+        }
+    },
+    "判断是否在主界面": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "判断是否在主界面-方法一",
+                    "判断是否在主界面-方法二",
+                    "判断是否在主界面-方法三"
+                ]
+            }
+        },
+        "next": [
+            "已在主界面任务结束-返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2262,
+                "y": -219
+            }
+        }
+    },
+    "需要更新资料": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    739,
+                    525,
+                    216,
+                    78
+                ],
+                "expected": [
+                    "开始更新资料"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2216,
+                "y": 921
             }
         }
     }

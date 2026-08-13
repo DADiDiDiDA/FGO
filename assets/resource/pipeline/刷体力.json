@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785630760649,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": -1492,
-                "y": 384,
-                "zoom": 0.37
+                "x": -3022,
+                "y": 707,
+                "zoom": 0.76
             },
             "filename": "刷体力",
             "version": "v1.7.4"
@@ -18,8 +15,8 @@
     "$__mpe_external_返回主界面开始_刷体力": {
         "$__mpe_code": {
             "position": {
-                "x": 4741,
-                "y": -127
+                "x": 3876,
+                "y": -387
             }
         }
     },
@@ -112,45 +109,77 @@
     },
     "刷体力开始": {
         "next": [
-            "进入迦勒底之门",
-            "[JumpBack]返回主界面开始"
+            "刷体力方式"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4370,
-                "y": -239
+                "x": 2681,
+                "y": -433
+            }
+        }
+    },
+    "刷体力方式": {
+        "next": [
+            "方式一正常刷关卡",
+            "方式二换青铜树苗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3068,
+                "y": -460
+            }
+        }
+    },
+    "可以换多个树苗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    235,
+                    251,
+                    822,
+                    128
+                ],
+                "template": [
+                    "商品加号标志.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 5,
+        "repeat_delay": 200,
+        "next": [
+            "确认树苗更换"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5179,
+                "y": 213
             }
         }
     },
     "回到关卡最上端": {
         "action": {
-            "type": "Swipe",
+            "type": "Click",
             "param": {
-                "begin": [
-                    961,
-                    120,
-                    1,
-                    1
-                ],
-                "end": [
-                    [
-                        952,
-                        656,
-                        1,
-                        1
-                    ]
+                "target": [
+                    1248,
+                    97,
+                    19,
+                    11
                 ]
             }
         },
-        "repeat": 5,
-        "repeat_delay": 400,
         "next": [
             "判断打哪个类型开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5328,
-                "y": -923
+                "x": 5201,
+                "y": -817
             }
         }
     },
@@ -214,13 +243,71 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "回到关卡最上端"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5051,
-                "y": -678
+                "x": 4773,
+                "y": -922
+            }
+        }
+    },
+    "开始进入商店-换树苗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    754,
+                    622,
+                    100,
+                    42
+                ],
+                "expected": [
+                    "商店"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入换树苗界面",
+            "[JumpBack]未找到换树苗界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4173,
+                "y": -161
+            }
+        }
+    },
+    "开始进入菜单-换树苗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1123,
+                    628,
+                    116,
+                    53
+                ],
+                "expected": [
+                    "菜单"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始进入商店-换树苗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3875,
+                "y": -196
             }
         }
     },
@@ -434,6 +521,59 @@
             }
         }
     },
+    "方式一正常刷关卡": {
+        "next": [
+            "进入迦勒底之门",
+            "[JumpBack]返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3576,
+                "y": -609
+            }
+        }
+    },
+    "方式二换青铜树苗": {
+        "next": [
+            "开始进入菜单-换树苗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3570,
+                "y": -308
+            }
+        }
+    },
+    "未找到换树苗界面": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    981,
+                    662,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        1004,
+                        324,
+                        1,
+                        1
+                    ]
+                ],
+                "duration": [
+                    1000
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4512,
+                "y": 156
+            }
+        }
+    },
     "滑动关卡界面": {
         "action": {
             "type": "Swipe",
@@ -457,6 +597,7 @@
                 ]
             }
         },
+        "post_delay": 1500,
         "$__mpe_code": {
             "position": {
                 "x": 6134,
@@ -487,10 +628,92 @@
                 ]
             }
         },
+        "post_delay": 1500,
         "$__mpe_code": {
             "position": {
-                "x": 5168,
-                "y": -197
+                "x": 4899,
+                "y": -472
+            }
+        }
+    },
+    "确认树苗更换": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    731,
+                    491,
+                    148,
+                    154
+                ],
+                "expected": [
+                    "交换"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5205,
+                "y": 675
+            }
+        }
+    },
+    "行动力换树苗不足-换树苗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    551,
+                    429,
+                    162,
+                    60
+                ],
+                "expected": [
+                    "行动力不足"
+                ]
+            }
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5157,
+                "y": -66
+            }
+        }
+    },
+    "进入换树苗界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    843,
+                    89,
+                    301,
+                    628
+                ],
+                "expected": [
+                    "青铜树苗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择换树苗开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4509,
+                "y": -139
             }
         }
     },
@@ -515,12 +738,67 @@
         "post_delay": 2000,
         "next": [
             "开始寻找每日任务",
+            "迦勒底之门返回顶部"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4027,
+                "y": -737
+            }
+        }
+    },
+    "迦勒底之门返回顶部": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    97,
+                    19,
+                    11
+                ]
+            }
+        },
+        "post_delay": 2500,
+        "next": [
+            "开始寻找每日任务",
             "[JumpBack]滑动屏幕-未找到每日任务"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4775,
-                "y": -564
+                "x": 4411,
+                "y": -701
+            }
+        }
+    },
+    "选择换树苗开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    732,
+                    120,
+                    139,
+                    60
+                ],
+                "expected": [
+                    "青铜果实"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "行动力换树苗不足-换树苗",
+            "可以换多个树苗",
+            "确认树苗更换"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4807,
+                "y": 62
             }
         }
     }

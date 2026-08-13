@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785632897409,
+            "lastSyncTime": 1785802470921,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\免费友情点召唤.json",
             "savedViewport": {
-                "x": -7972,
-                "y": 250,
-                "zoom": 0.75
+                "x": -9440,
+                "y": 323,
+                "zoom": 0.86
             },
             "filename": "免费友情点召唤",
             "version": "v1.7.4"
@@ -18,19 +18,20 @@
     "$__mpe_external_返回主界面开始_免费友情点召唤": {
         "$__mpe_code": {
             "position": {
-                "x": 12078,
-                "y": 321
+                "x": 12134,
+                "y": 732
             }
         }
     },
     "免费友情点召唤开始": {
         "next": [
-            "进入选择菜单-友情召唤"
+            "进入选择菜单-友情召唤",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9780,
-                "y": 121
+                "x": 9550,
+                "y": 354
             }
         }
     },
@@ -117,25 +118,14 @@
         }
     },
     "疯狂点击空白处-友情召唤": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {
-                "roi": [
-                    1127,
-                    94,
-                    100,
-                    52
-                ]
-            }
-        },
         "action": {
             "type": "Click",
             "param": {
                 "target": [
-                    1127,
+                    1088,
                     94,
-                    100,
-                    52
+                    162,
+                    37
                 ]
             }
         },
@@ -164,6 +154,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "next": [
             "召唤界面结束了吗-友情召唤",
             "[JumpBack]疯狂点击空白处-友情召唤"

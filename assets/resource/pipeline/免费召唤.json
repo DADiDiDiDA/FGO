@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785633124278,
+            "lastSyncTime": 1785802785862,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\免费召唤.json",
             "savedViewport": {
-                "x": -11197,
-                "y": 282,
-                "zoom": 1
+                "x": -10962,
+                "y": 9,
+                "zoom": 0.99
             },
             "filename": "免费召唤",
             "version": "v1.7.4"
@@ -118,24 +118,16 @@
     },
     "疯狂点击空白处-免费召唤": {
         "recognition": {
-            "type": "DirectHit",
-            "param": {
-                "roi": [
-                    1127,
-                    94,
-                    100,
-                    52
-                ]
-            }
+            "type": "OCR"
         },
         "action": {
             "type": "Click",
             "param": {
                 "target": [
-                    1127,
+                    1088,
                     94,
-                    100,
-                    52
+                    162,
+                    37
                 ]
             }
         },
@@ -164,6 +156,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "next": [
             "召唤界面结束了吗-免费召唤",
             "[JumpBack]疯狂点击空白处-免费召唤"

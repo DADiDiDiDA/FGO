@@ -32,7 +32,7 @@
             "name": "刷体力",
             "entry": "刷体力开始",
             "default_check": true,
-            "option": ["选择关卡类型"],
+            "option": ["选择刷体力方式"],
             "description": "进入迦勒底之门，选择每日任务关卡，消耗体力进行战斗"
         },
         {
@@ -68,6 +68,33 @@
         }
     ],
     "option": {
+        "选择刷体力方式": {
+            "type": "select",
+            "label": "选择刷体力方式",
+            "description": "选择刷体力的方式",
+            "default_case": "方式一正常刷关卡",
+            "cases": [
+                {
+                    "name": "方式一正常刷关卡",
+                    "label": "正常刷关卡",
+                    "option": ["选择关卡类型"],
+                    "pipeline_override": {
+                        "刷体力方式": {
+                            "next": ["方式一正常刷关卡"]
+                        }
+                    }
+                },
+                {
+                    "name": "方式二换青铜树苗",
+                    "label": "换青铜树苗",
+                    "pipeline_override": {
+                        "刷体力方式": {
+                            "next": ["方式二换青铜树苗"]
+                        }
+                    }
+                }
+            ]
+        },
         "选择关卡类型": {
             "type": "select",
             "label": "选择关卡类型",
