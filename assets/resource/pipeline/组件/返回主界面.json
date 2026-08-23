@@ -3,13 +3,37 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1787206972448,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\组件\\返回主界面.json",
             "savedViewport": {
-                "x": -682,
-                "y": -403,
-                "zoom": 0.65
+                "x": -883,
+                "y": -509,
+                "zoom": 0.72
             },
             "filename": "返回主界面",
-            "version": "v1.7.4"
+            "version": "v1.7.6"
+        }
+    },
+    "判断是否在主界面": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "判断是否在主界面-方法一",
+                    "判断是否在主界面-方法二",
+                    "判断是否在主界面-方法三"
+                ]
+            }
+        },
+        "next": [
+            "已在主界面任务结束-返回主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2262,
+                "y": -219
+            }
         }
     },
     "判断是否在主界面-方法一": {
@@ -101,8 +125,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2180,
-                "y": 735
+                "x": 2187,
+                "y": 675
             }
         }
     },
@@ -152,8 +176,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 2174,
-                "y": 1168
+                "x": 2171,
+                "y": 1308
             }
         }
     },
@@ -272,6 +296,7 @@
             "[JumpBack]左上角关闭按钮",
             "[JumpBack]右上角叉号-返回主界面",
             "[JumpBack]需要更新资料",
+            "[JumpBack]上次退出时位于战斗",
             "[JumpBack]按ESc返回主界面-返回主界面"
         ],
         "$__mpe_code": {
@@ -307,27 +332,6 @@
             }
         }
     },
-    "判断是否在主界面": {
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "判断是否在主界面-方法一",
-                    "判断是否在主界面-方法二",
-                    "判断是否在主界面-方法三"
-                ]
-            }
-        },
-        "next": [
-            "已在主界面任务结束-返回主界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2262,
-                "y": -219
-            }
-        }
-    },
     "需要更新资料": {
         "recognition": {
             "type": "OCR",
@@ -350,6 +354,31 @@
             "position": {
                 "x": 2216,
                 "y": 921
+            }
+        }
+    },
+    "上次退出时位于战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    358,
+                    519,
+                    163,
+                    65
+                ],
+                "expected": [
+                    "不进入"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2199,
+                "y": 1098
             }
         }
     }

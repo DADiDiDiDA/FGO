@@ -3,13 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1787220516714,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": -3022,
-                "y": 707,
-                "zoom": 0.76
+                "x": -3521,
+                "y": 397,
+                "zoom": 0.65
             },
             "filename": "刷体力",
-            "version": "v1.7.4"
+            "version": "v1.7.6"
         }
     },
     "$__mpe_external_返回主界面开始_刷体力": {
@@ -17,14 +20,45 @@
             "position": {
                 "x": 3876,
                 "y": -387
-            }
+            },
+            "extra_positions": [
+                {
+                    "x": 7737,
+                    "y": -425
+                }
+            ]
         }
     },
     "$__mpe_external_选择第一位支援-正常出击_刷体力": {
         "$__mpe_code": {
             "position": {
-                "x": 7570,
-                "y": -282
+                "x": 7717,
+                "y": -264
+            }
+        }
+    },
+    "体力还足够吗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    536,
+                    30,
+                    196,
+                    40
+                ],
+                "expected": [
+                    "行动力回复"
+                ]
+            }
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7454,
+                "y": -523
             }
         }
     },
@@ -71,7 +105,9 @@
         }
     },
     "关卡已选择-开始刷本": {
+        "post_delay": 1000,
         "next": [
+            "体力还足够吗",
             "选择第一位支援-正常出击"
         ],
         "$__mpe_code": {
@@ -85,7 +121,8 @@
         "post_delay": 2000,
         "next": [
             "打推荐等级40",
-            "[JumpBack]滑动关卡界面"
+            "[JumpBack]滑动关卡界面",
+            "[JumpBack]找等级出错了返回上一级操作"
         ],
         "$__mpe_code": {
             "position": {
@@ -97,6 +134,7 @@
     "判断打哪个类型开始": {
         "post_delay": 3000,
         "next": [
+            "搜集种火",
             "宝物库之门",
             "[JumpBack]滑动关卡界面"
         ],
@@ -225,6 +263,32 @@
             }
         }
     },
+    "左上角关闭按钮_刷体力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    26,
+                    15,
+                    142,
+                    53
+                ],
+                "expected": [
+                    "关闭",
+                    "返回"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 6532,
+                "y": -829
+            }
+        }
+    },
     "开始寻找每日任务": {
         "recognition": {
             "type": "OCR",
@@ -334,8 +398,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6682,
-                "y": -286
+                "x": 6742,
+                "y": -363
             }
         }
     },
@@ -362,8 +426,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6677,
-                "y": -67
+                "x": 6746,
+                "y": -119
             }
         }
     },
@@ -390,8 +454,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6679,
-                "y": 176
+                "x": 6751,
+                "y": 145
             }
         }
     },
@@ -418,8 +482,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6681,
-                "y": -559
+                "x": 6733,
+                "y": -636
             }
         }
     },
@@ -446,8 +510,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6696,
-                "y": 424
+                "x": 6740,
+                "y": 401
             }
         }
     },
@@ -474,8 +538,33 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6733,
-                "y": 701
+                "x": 6762,
+                "y": 646
+            }
+        }
+    },
+    "找等级出错了返回上一级操作": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1010,
+                    1,
+                    264,
+                    74
+                ],
+                "expected": [
+                    "助战选择"
+                ]
+            }
+        },
+        "next": [
+            "左上角关闭按钮_刷体力"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6363,
+                "y": -474
             }
         }
     },
@@ -575,6 +664,7 @@
         }
     },
     "滑动关卡界面": {
+        "max_hit": 50,
         "action": {
             "type": "Swipe",
             "param": {
