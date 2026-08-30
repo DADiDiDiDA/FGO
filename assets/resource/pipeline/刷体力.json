@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787220516714,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": -3521,
-                "y": 397,
-                "zoom": 0.65
+                "x": -4973,
+                "y": 387,
+                "zoom": 0.87
             },
             "filename": "刷体力",
-            "version": "v1.7.6"
+            "version": "v1.9.1"
         }
     },
     "$__mpe_external_返回主界面开始_刷体力": {
@@ -121,8 +118,8 @@
         "post_delay": 2000,
         "next": [
             "打推荐等级40",
-            "[JumpBack]滑动关卡界面",
-            "[JumpBack]找等级出错了返回上一级操作"
+            "[JumpBack]找等级出错了返回上一级操作",
+            "[JumpBack]滑动关卡界面"
         ],
         "$__mpe_code": {
             "position": {
@@ -563,8 +560,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6363,
-                "y": -474
+                "x": 6395,
+                "y": -454
             }
         }
     },

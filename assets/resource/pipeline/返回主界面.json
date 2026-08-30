@@ -3,20 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787539056816,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\组件\\返回主界面.json",
             "savedViewport": {
-                "x": -1280,
-                "y": 456,
-                "zoom": 0.75
+                "x": -1385,
+                "y": 70,
+                "zoom": 1
             },
             "filename": "返回主界面",
-            "version": "v1.8.1"
+            "version": "v1.9.1"
         }
     },
     "上次退出时位于战斗": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -59,12 +56,13 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2262,
-                "y": -219
+                "x": 2394,
+                "y": -204
             }
         }
     },
     "判断是否在主界面-方法一": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -91,6 +89,7 @@
         }
     },
     "判断是否在主界面-方法三": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -114,6 +113,7 @@
         }
     },
     "判断是否在主界面-方法二": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -140,6 +140,7 @@
         }
     },
     "右上角叉号-返回主界面": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -159,6 +160,7 @@
         }
     },
     "左上角关闭按钮": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -184,6 +186,7 @@
         }
     },
     "按ESc返回主界面-返回主界面": {
+        "max_hit": 25,
         "action": {
             "type": "ClickKey",
             "param": {
@@ -202,6 +205,7 @@
         }
     },
     "是不是返回过头了-返回主界面": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -221,12 +225,13 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2128,
-                "y": -748
+                "x": 2143,
+                "y": -825
             }
         }
     },
     "点击下一步-返回主界面": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -252,6 +257,7 @@
         }
     },
     "点击游戏界面-返回主界面": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -279,6 +285,7 @@
         }
     },
     "签到界面关闭-返回主界面": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -304,9 +311,7 @@
         }
     },
     "返回主界面开始": {
-        "post_delay": 2000,
-        "timeout": 60000,
-        "rate_limit": 500,
+        "post_delay": 4000,
         "next": [
             "[JumpBack]是不是返回过头了-返回主界面",
             "[JumpBack]签到界面关闭-返回主界面",
@@ -317,7 +322,8 @@
             "[JumpBack]右上角叉号-返回主界面",
             "[JumpBack]需要更新资料",
             "[JumpBack]上次退出时位于战斗",
-            "[JumpBack]按ESc返回主界面-返回主界面"
+            "[JumpBack]按ESc返回主界面-返回主界面",
+            "无法处理开始截图"
         ],
         "$__mpe_code": {
             "position": {
@@ -327,6 +333,7 @@
         }
     },
     "返回过头处理-返回主界面": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -353,6 +360,7 @@
         }
     },
     "需要更新资料": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -403,6 +411,20 @@
             "position": {
                 "x": 3041,
                 "y": -160
+            }
+        }
+    },
+    "无法处理开始截图": {
+        "action": {
+            "type": "Screencap"
+        },
+        "next": [
+            "判断是否在主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1716,
+                "y": 503
             }
         }
     }
