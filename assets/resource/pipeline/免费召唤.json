@@ -3,16 +3,21 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785802785862,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\免费召唤.json",
             "savedViewport": {
-                "x": -10962,
-                "y": 9,
-                "zoom": 0.99
+                "x": -6553,
+                "y": 42,
+                "zoom": 0.66
             },
             "filename": "免费召唤",
-            "version": "v1.7.4"
+            "version": "v1.9.2"
+        }
+    },
+    "进入上一个卡池结束-免费召唤": {
+        "$__mpe_code": {
+            "position": {
+                "x": 11274,
+                "y": 640
+            }
         }
     },
     "$__mpe_external_返回主界面开始_免费召唤": {
@@ -55,8 +60,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 10683,
-                "y": -14
+                "x": 10674,
+                "y": -55
             }
         }
     },
@@ -169,6 +174,7 @@
         }
     },
     "进入上一个卡池-免费召唤": {
+        "max_hit": 10,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -187,11 +193,15 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1500,
+        "post_delay": 2000,
+        "next": [
+            "关闭卡池提示-免费召唤",
+            "进入上一个卡池结束-免费召唤"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 10735,
-                "y": 288
+                "x": 10720,
+                "y": 333
             }
         }
     },
@@ -249,6 +259,34 @@
             "position": {
                 "x": 10040,
                 "y": 121
+            }
+        }
+    },
+    "关闭卡池提示-免费召唤": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    518,
+                    454,
+                    256,
+                    251
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入上一个卡池结束-免费召唤"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11035,
+                "y": 280
             }
         }
     }

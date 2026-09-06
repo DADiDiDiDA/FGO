@@ -3,16 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1786244615272,
+            "lastSyncTime": 1788488259291,
             "isModifiedExternally": false,
+            "isDeleted": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\领取邮箱奖励.json",
             "savedViewport": {
-                "x": -4558,
-                "y": 448,
-                "zoom": 0.65
+                "x": -4118,
+                "y": 400,
+                "zoom": 0.57
             },
             "filename": "领取邮箱奖励",
-            "version": "v1.7.4"
+            "version": "v1.9.2"
         }
     },
     "$__mpe_external_返回主界面开始_领取邮箱奖励": {
@@ -28,13 +29,13 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    1010,
-                    188,
-                    180,
-                    65
+                    1005,
+                    263,
+                    215,
+                    71
                 ],
                 "expected": [
-                    "全部领取"
+                    "领取"
                 ]
             }
         },
@@ -113,19 +114,6 @@
             }
         }
     },
-    "领取邮箱奖励开始": {
-        "post_delay": 2000,
-        "next": [
-            "进入邮箱界面",
-            "[JumpBack]返回主界面开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 7398,
-                "y": -115
-            }
-        }
-    },
     "进入邮箱界面_第二次": {
         "recognition": {
             "type": "TemplateMatch",
@@ -151,6 +139,19 @@
             "position": {
                 "x": 8113,
                 "y": -240
+            }
+        }
+    },
+    "领取邮箱奖励开始": {
+        "post_delay": 2000,
+        "next": [
+            "进入邮箱界面",
+            "[JumpBack]返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7398,
+                "y": -115
             }
         }
     }

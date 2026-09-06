@@ -3,23 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785802470921,
+            "lastSyncTime": 1788489292094,
             "isModifiedExternally": false,
+            "isDeleted": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\免费友情点召唤.json",
             "savedViewport": {
-                "x": -9440,
-                "y": 323,
-                "zoom": 0.86
+                "x": -6701,
+                "y": 150,
+                "zoom": 0.66
             },
             "filename": "免费友情点召唤",
-            "version": "v1.7.4"
+            "version": "v1.9.2"
         }
     },
     "$__mpe_external_返回主界面开始_免费友情点召唤": {
         "$__mpe_code": {
             "position": {
-                "x": 12134,
-                "y": 732
+                "x": 12062,
+                "y": 1154
             }
         }
     },
@@ -56,8 +57,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 10683,
-                "y": -14
+                "x": 10709,
+                "y": -279
             }
         }
     },
@@ -84,8 +85,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 10996,
-                "y": -150
+                "x": 11089,
+                "y": -374
             }
         }
     },
@@ -112,8 +113,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 11684,
-                "y": -274
+                "x": 11777,
+                "y": -327
             }
         }
     },
@@ -131,8 +132,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 11664,
-                "y": 32
+                "x": 11737,
+                "y": -29
             }
         }
     },
@@ -161,12 +162,13 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 11303,
-                "y": -96
+                "x": 11442,
+                "y": -401
             }
         }
     },
     "进入上一个卡池-友情召唤": {
+        "max_hit": 20,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -185,11 +187,15 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1500,
+        "post_delay": 2500,
+        "next": [
+            "关闭卡池提示-免费召唤_副本1",
+            "进入上一个卡池结束-友情召唤"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 10735,
-                "y": 288
+                "x": 10870,
+                "y": -52
             }
         }
     },
@@ -213,7 +219,8 @@
         },
         "next": [
             "判断是否为友情卡池-友情召唤",
-            "[JumpBack]进入上一个卡池-友情召唤"
+            "[JumpBack]进入上一个卡池-友情召唤",
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -247,6 +254,42 @@
             "position": {
                 "x": 10040,
                 "y": 121
+            }
+        }
+    },
+    "关闭卡池提示-免费召唤_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    518,
+                    454,
+                    256,
+                    251
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入上一个卡池结束-友情召唤"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 11268,
+                "y": -69
+            }
+        }
+    },
+    "进入上一个卡池结束-友情召唤": {
+        "$__mpe_code": {
+            "position": {
+                "x": 11536,
+                "y": 200
             }
         }
     }
