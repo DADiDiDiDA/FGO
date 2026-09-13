@@ -4,19 +4,19 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -4973,
-                "y": 387,
-                "zoom": 0.87
+                "x": -2439,
+                "y": 770,
+                "zoom": 0.75
             },
             "filename": "刷体力",
-            "version": "v1.9.1"
+            "version": "v1.9.3"
         }
     },
     "$__mpe_external_返回主界面开始_刷体力": {
         "$__mpe_code": {
             "position": {
-                "x": 3876,
-                "y": -387
+                "x": 4230,
+                "y": -367
             },
             "extra_positions": [
                 {
@@ -609,13 +609,14 @@
     },
     "方式一正常刷关卡": {
         "next": [
+            "[JumpBack]先返回主界面",
             "进入迦勒底之门",
-            "[JumpBack]返回主界面开始"
+            "[JumpBack]滑动屏幕-未找到迦勒底之门"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3576,
-                "y": -609
+                "x": 3564,
+                "y": -614
             }
         }
     },
@@ -829,8 +830,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4027,
-                "y": -737
+                "x": 3963,
+                "y": -852
             }
         }
     },
@@ -886,6 +887,49 @@
             "position": {
                 "x": 4807,
                 "y": 62
+            }
+        }
+    },
+    "先返回主界面": {
+        "max_hit": 1,
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3910,
+                "y": -515
+            }
+        }
+    },
+    "滑动屏幕-未找到迦勒底之门": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    939,
+                    662,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        924,
+                        271,
+                        1,
+                        1
+                    ]
+                ],
+                "duration": [
+                    2000
+                ]
+            }
+        },
+        "post_delay": 1500,
+        "$__mpe_code": {
+            "position": {
+                "x": 3948,
+                "y": -1133
             }
         }
     }
