@@ -3,17 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1788489292094,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\免费友情点召唤.json",
             "savedViewport": {
-                "x": -6701,
-                "y": 150,
-                "zoom": 0.66
+                "x": -5679,
+                "y": 250,
+                "zoom": 0.57
             },
             "filename": "免费友情点召唤",
-            "version": "v1.9.2"
+            "version": "v1.10.1"
         }
     },
     "$__mpe_external_返回主界面开始_免费友情点召唤": {
@@ -181,7 +177,10 @@
                 "template": [
                     "更换卡池左箭头.png"
                 ],
-                "green_mask": true
+                "green_mask": true,
+                "threshold": [
+                    0.6
+                ]
             }
         },
         "action": {
