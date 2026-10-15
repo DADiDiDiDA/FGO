@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1785209646023,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\组件\\处于战斗-开始选择指令卡.json",
             "savedViewport": {
-                "x": -2640,
-                "y": 80,
-                "zoom": 0.75
+                "x": -2055,
+                "y": 155,
+                "zoom": 0.5
             },
             "filename": "处于战斗-开始选择指令卡",
-            "version": "v1.7.4"
+            "version": "v2.1.0"
         }
     },
     "处于战斗选择指令卡开始": {
@@ -48,8 +45,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 3798,
-                "y": 34
+                "x": 3766,
+                "y": -1
             }
         }
     },
@@ -70,8 +67,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 3736,
-                "y": -316
+                "x": 3768,
+                "y": -424
             }
         }
     },
@@ -92,8 +89,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 3754,
-                "y": -141
+                "x": 3797,
+                "y": -202
             }
         }
     },
@@ -115,6 +112,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "指令卡1"
         ],
@@ -136,20 +134,24 @@
                     92
                 ],
                 "expected": [
-                    "击"
+                    "击",
+                    "力",
+                    "迅",
+                    "技"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "指令卡3"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4062,
-                "y": 234
+                "x": 4147,
+                "y": 282
             }
         }
     },
@@ -164,20 +166,24 @@
                     94
                 ],
                 "expected": [
-                    "击"
+                    "击",
+                    "力",
+                    "迅",
+                    "技"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "指令卡5"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4363,
-                "y": 240
+                "x": 4496,
+                "y": 272
             }
         }
     },
@@ -192,7 +198,10 @@
                     89
                 ],
                 "expected": [
-                    "击"
+                    "击",
+                    "力",
+                    "迅",
+                    "技"
                 ]
             }
         },
@@ -200,10 +209,54 @@
             "type": "Click"
         },
         "post_delay": 2000,
+        "next": [
+            "指令卡4",
+            "指令卡输入结束"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 4676,
-                "y": 222
+                "x": 4908,
+                "y": 284
+            }
+        }
+    },
+    "指令卡4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    822,
+                    500,
+                    157,
+                    121
+                ],
+                "expected": [
+                    "击",
+                    "力",
+                    "迅",
+                    "技"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "指令卡输入结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5325,
+                "y": 173
+            }
+        }
+    },
+    "指令卡输入结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5752,
+                "y": 407
             }
         }
     }

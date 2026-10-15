@@ -199,6 +199,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 8316,
@@ -224,6 +225,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "选择第一位支援_连续出击",
             "任务已结束",
@@ -254,6 +256,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 8311,
@@ -279,6 +282,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 8313,
@@ -304,6 +308,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "战斗结束后处理-重复刷本"
         ],
@@ -348,6 +353,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "等待战斗结束-重复刷本"
         ],
@@ -384,6 +390,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "选择开始任务-重复刷本"
         ],
@@ -420,6 +427,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "等待战斗结束-重复刷本"
         ],

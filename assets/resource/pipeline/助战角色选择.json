@@ -42,6 +42,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "自动编队开始"
         ],
@@ -94,7 +95,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1500,
+        "post_delay": 2000,
         "next": [
             "有编队需求确认-助战角色选择",
             "编队确认出击开始",
@@ -125,7 +126,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1500,
+        "post_delay": 2000,
         "next": [
             "有自动编队功能确认-助战角色选择",
             "编队确认出击开始"
@@ -155,6 +156,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "确认自动编队结果-助战角色确认"
         ],
@@ -188,6 +190,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 3785,
@@ -213,6 +216,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "编队确认出击开始"
         ],
@@ -242,7 +246,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1500,
+        "post_delay": 2000,
         "next": [
             "[JumpBack]需要选择角色-助战角色选择",
             "助战角色选择结束"
