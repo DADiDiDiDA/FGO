@@ -28,20 +28,20 @@
             "name": "领取邮箱奖励",
             "entry": "领取邮箱奖励开始",
             "default_check": true,
-            "description": "进入邮箱，一键领取所有邮件奖励"
+            "description": "进入邮箱，一键领取所有邮件奖励（除卡牌外内容）"
         },
         {
             "name": "刷体力",
             "entry": "刷体力开始",
             "default_check": true,
             "option": ["选择刷体力方式"],
-            "description": "进入迦勒底之门，选择每日任务关卡，消耗体力进行战斗"
+            "description": "消耗体力进行战斗"
         },
         {
             "name": "领取任务奖励",
             "entry": "领取任务奖励开始",
             "default_check": true,
-            "description": "进入任务界面，统一领取所有已完成的任务奖励"
+            "description": "领取所有已完成的任务奖励"
         },
         {
             "name": "免费友情点召唤",
@@ -66,19 +66,19 @@
             "entry": "推图开始",
             "default_check": false,
             "option": ["选择自动战斗模式"],
-            "description": "自动推进主线/活动关卡，包括选择关卡、跳过剧情、战斗、助战选择等全流程"
+            "description": "自动推进主线/活动关卡，包括选择关卡、跳过剧情、战斗、助战选择等全流程；但是bug很多"
         }
     ],
     "option": {
         "选择刷体力方式": {
             "type": "select",
             "label": "选择刷体力方式",
-            "description": "选择刷体力的方式",
+            "description": "选择刷体力方式",
             "default_case": "方式一正常刷关卡",
             "cases": [
                 {
                     "name": "方式一正常刷关卡",
-                    "label": "正常刷关卡",
+                    "label": "正常刷",
                     "option": ["选择关卡类型"],
                     "pipeline_override": {
                         "刷体力方式": {
