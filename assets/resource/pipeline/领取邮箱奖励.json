@@ -106,7 +106,7 @@
         "post_delay": 3000,
         "next": [
             "全部领取邮箱奖励",
-            "[JumpBack]进入邮箱界面_第二次"
+            "[JumpBack]进入邮箱界面-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -115,7 +115,7 @@
             }
         }
     },
-    "进入邮箱界面_第二次": {
+    "进入邮箱界面-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
