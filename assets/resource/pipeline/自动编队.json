@@ -61,8 +61,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "确认自动编队结果",
-            "[JumpBack]返回主界面开始"
+            "确认自动编队结果"
         ],
         "$__mpe_code": {
             "position": {
@@ -117,8 +116,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "确认自动编队",
-            "[JumpBack]返回主界面开始"
+            "确认自动编队"
         ],
         "$__mpe_code": {
             "position": {

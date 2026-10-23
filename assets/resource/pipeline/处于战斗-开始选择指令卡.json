@@ -114,8 +114,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "指令卡1",
-            "[JumpBack]返回主界面开始"
+            "指令卡1"
         ],
         "$__mpe_code": {
             "position": {
@@ -147,8 +146,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "指令卡3",
-            "[JumpBack]返回主界面开始"
+            "指令卡3"
         ],
         "$__mpe_code": {
             "position": {
@@ -180,8 +178,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "指令卡5",
-            "[JumpBack]返回主界面开始"
+            "指令卡5"
         ],
         "$__mpe_code": {
             "position": {
