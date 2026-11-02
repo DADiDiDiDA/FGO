@@ -3,7 +3,6 @@
     "name": "FGO",
     "description": "FGO 日常自动化脚本",
     "version": "0.2.4",
-
     "controller": [
         {
             "name": "安卓端",
@@ -14,7 +13,9 @@
     "resource": [
         {
             "name": "官服",
-            "path": ["./resource"]
+            "path": [
+                "./resource"
+            ]
         }
     ],
     "task": [
@@ -22,51 +23,71 @@
             "name": "进入游戏",
             "entry": "返回主界面开始",
             "default_check": true,
-            "description": "进入游戏主界面"
+            "description": "进入游戏主界面",
+            "label": "进入游戏",
+            "doc": "自动完成「进入游戏」。"
         },
         {
             "name": "领取邮箱奖励",
             "entry": "领取邮箱奖励开始",
             "default_check": true,
-            "description": "进入邮箱，一键领取所有邮件奖励（除卡牌外内容）"
+            "description": "进入邮箱，一键领取所有邮件奖励（除卡牌外内容）",
+            "label": "领取邮箱奖励",
+            "doc": "自动完成「领取邮箱奖励」。"
         },
         {
             "name": "刷体力",
             "entry": "刷体力开始",
             "default_check": true,
-            "option": ["选择刷体力方式"],
-            "description": "消耗体力进行战斗"
+            "option": [
+                "选择刷体力方式"
+            ],
+            "description": "消耗体力进行战斗",
+            "label": "刷体力",
+            "doc": "自动完成「刷体力」。"
         },
         {
             "name": "领取任务奖励",
             "entry": "领取任务奖励开始",
             "default_check": true,
-            "description": "领取所有已完成的任务奖励"
+            "description": "领取所有已完成的任务奖励",
+            "label": "领取任务奖励",
+            "doc": "自动完成「领取任务奖励」。"
         },
         {
             "name": "免费友情点召唤",
             "entry": "免费友情点召唤开始",
             "default_check": true,
-            "description": "进入友情点卡池，执行每日免费的10连友情点召唤"
+            "description": "进入友情点卡池，执行每日免费的10连友情点召唤",
+            "label": "免费友情点召唤",
+            "doc": "自动完成「免费友情点召唤」。"
         },
         {
             "name": "免费召唤",
             "entry": "免费剧情召唤开始",
             "default_check": false,
-            "description": "进入剧情卡池，执行每日免费的剧情召唤"
+            "description": "进入剧情卡池，执行每日免费的剧情召唤",
+            "label": "免费召唤",
+            "doc": "自动完成「免费召唤」。"
         },
         {
             "name": "重复刷关卡",
             "entry": "重复刷关卡开始",
             "default_check": false,
-            "description": "连续重复刷同一关卡，直到体力不足或任务结束（使用时右下角应该有开始任务字符！）"
+            "description": "连续重复刷同一关卡，直到体力不足或任务结束（使用时右下角应该有开始任务字符！）",
+            "label": "重复刷关卡",
+            "doc": "自动完成「重复刷关卡」。"
         },
         {
             "name": "自动推图",
             "entry": "推图开始",
             "default_check": false,
-            "option": ["选择自动战斗模式"],
-            "description": "自动推进主线/活动关卡，包括选择关卡、跳过剧情、战斗、助战选择等全流程；但是bug很多"
+            "option": [
+                "选择自动战斗模式"
+            ],
+            "description": "自动推进主线/活动关卡，包括选择关卡、跳过剧情、战斗、助战选择等全流程；但是bug很多",
+            "label": "自动推图",
+            "doc": "自动完成「自动推图」。"
         }
     ],
     "option": {
@@ -79,10 +100,14 @@
                 {
                     "name": "方式一正常刷关卡",
                     "label": "正常刷",
-                    "option": ["选择关卡类型"],
+                    "option": [
+                        "选择关卡类型"
+                    ],
                     "pipeline_override": {
                         "刷体力方式": {
-                            "next": ["方式一正常刷关卡"]
+                            "next": [
+                                "方式一正常刷关卡"
+                            ]
                         }
                     }
                 },
@@ -91,7 +116,9 @@
                     "label": "换青铜树苗",
                     "pipeline_override": {
                         "刷体力方式": {
-                            "next": ["方式二换青铜树苗"]
+                            "next": [
+                                "方式二换青铜树苗"
+                            ]
                         }
                     }
                 }
@@ -106,30 +133,45 @@
                 {
                     "name": "搜集种火",
                     "label": "搜集种火",
-                    "option": ["选择种火等级"],
+                    "option": [
+                        "选择种火等级"
+                    ],
                     "pipeline_override": {
                         "判断打哪个类型开始": {
-                            "next": ["搜集种火", "[JumpBack]滑动关卡界面"]
+                            "next": [
+                                "搜集种火",
+                                "[JumpBack]滑动关卡界面"
+                            ]
                         }
                     }
                 },
                 {
                     "name": "修炼场",
                     "label": "修炼场",
-                    "option": ["选择修炼场等级"],
+                    "option": [
+                        "选择修炼场等级"
+                    ],
                     "pipeline_override": {
                         "判断打哪个类型开始": {
-                            "next": ["修炼场", "[JumpBack]滑动关卡界面"]
+                            "next": [
+                                "修炼场",
+                                "[JumpBack]滑动关卡界面"
+                            ]
                         }
                     }
                 },
                 {
                     "name": "宝物库之门",
                     "label": "宝物库之门",
-                    "option": ["选择宝物库等级"],
+                    "option": [
+                        "选择宝物库等级"
+                    ],
                     "pipeline_override": {
                         "判断打哪个类型开始": {
-                            "next": ["宝物库之门", "[JumpBack]滑动关卡界面"]
+                            "next": [
+                                "宝物库之门",
+                                "[JumpBack]滑动关卡界面"
+                            ]
                         }
                     }
                 }
@@ -141,11 +183,71 @@
             "description": "选择种火关卡推荐等级",
             "default_case": "等级40",
             "cases": [
-                {"name": "等级5", "label": "等级 5", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级5", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级10", "label": "等级 10", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级10", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级25", "label": "等级 25", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级25", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级40", "label": "等级 40", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级40", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级60", "label": "等级 60", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级60", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}}
+                {
+                    "name": "等级5",
+                    "label": "等级 5",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级5",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级10",
+                    "label": "等级 10",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级10",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级25",
+                    "label": "等级 25",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级25",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级40",
+                    "label": "等级 40",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级40",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级60",
+                    "label": "等级 60",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级60",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                }
             ]
         },
         "选择修炼场等级": {
@@ -154,11 +256,71 @@
             "description": "选择修炼场关卡推荐等级",
             "default_case": "等级60",
             "cases": [
-                {"name": "等级10", "label": "等级 10", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级10", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级25", "label": "等级 25", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级25", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级40", "label": "等级 40", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级40", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级60", "label": "等级 60", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级60", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级80", "label": "等级 80", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级80", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}}
+                {
+                    "name": "等级10",
+                    "label": "等级 10",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级10",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级25",
+                    "label": "等级 25",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级25",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级40",
+                    "label": "等级 40",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级40",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级60",
+                    "label": "等级 60",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级60",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级80",
+                    "label": "等级 80",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级80",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                }
             ]
         },
         "选择宝物库等级": {
@@ -167,11 +329,71 @@
             "description": "选择宝物库之门关卡推荐等级",
             "default_case": "等级40",
             "cases": [
-                {"name": "等级5", "label": "等级 5", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级5", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级10", "label": "等级 10", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级10", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级25", "label": "等级 25", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级25", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级40", "label": "等级 40", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级40", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}},
-                {"name": "等级60", "label": "等级 60", "pipeline_override": {"判断打哪个等级本开始": {"next": ["打推荐等级60", "[JumpBack]找等级出错了返回上一级操作", "[JumpBack]滑动关卡界面"]}}}
+                {
+                    "name": "等级5",
+                    "label": "等级 5",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级5",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级10",
+                    "label": "等级 10",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级10",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级25",
+                    "label": "等级 25",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级25",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级40",
+                    "label": "等级 40",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级40",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "等级60",
+                    "label": "等级 60",
+                    "pipeline_override": {
+                        "判断打哪个等级本开始": {
+                            "next": [
+                                "打推荐等级60",
+                                "[JumpBack]找等级出错了返回上一级操作",
+                                "[JumpBack]滑动关卡界面"
+                            ]
+                        }
+                    }
+                }
             ]
         },
         "选择自动战斗模式": {
@@ -185,7 +407,9 @@
                     "label": "需要自动战斗（开启自动战斗）",
                     "pipeline_override": {
                         "判断是否需要自动战斗-自动推图": {
-                            "next": ["需要自动战斗-自动推图"]
+                            "next": [
+                                "需要自动战斗-自动推图"
+                            ]
                         }
                     }
                 },
@@ -194,7 +418,9 @@
                     "label": "不需要自动战斗（手动/半自动）",
                     "pipeline_override": {
                         "判断是否需要自动战斗-自动推图": {
-                            "next": ["不需要自动战斗-自动推图"]
+                            "next": [
+                                "不需要自动战斗-自动推图"
+                            ]
                         }
                     }
                 }
