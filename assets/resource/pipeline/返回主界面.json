@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1169,
-                "y": -775,
-                "zoom": 0.76
+                "x": -174,
+                "y": 41,
+                "zoom": 0.67
             },
             "filename": "返回主界面",
-            "version": "v1.10.1"
+            "version": "v2.1.0"
         }
     },
     "上次退出时位于战斗": {
@@ -425,6 +425,7 @@
         "action": {
             "type": "Screencap"
         },
+        "post_delay": 2000,
         "next": [
             "判断是否在主界面"
         ],
@@ -433,7 +434,57 @@
                 "x": 1716,
                 "y": 503
             }
+        }
+    },
+    "是否需要启动游戏": {
+        "next": [
+            "需要启动游戏",
+            "不需要启动游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 721,
+                "y": 142
+            }
+        }
+    },
+    "需要启动游戏": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.bilibili.fatego"
+            }
         },
-        "post_delay": 2000
+        "next": [
+            "启动游戏结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1090,
+                "y": 46
+            }
+        }
+    },
+    "不需要启动游戏": {
+        "next": [
+            "启动游戏结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1071,
+                "y": 286
+            }
+        }
+    },
+    "启动游戏结束": {
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1369,
+                "y": 183
+            }
+        }
     }
 }

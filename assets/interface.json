@@ -1,7 +1,8 @@
 {
     "interface_version": 2,
     "name": "FGO",
-    "description": "FGO 日常自动化脚本",
+    "label": "命运-冠位指定",
+    "description": "《命运-冠位指定》日常自动化脚本",
     "version": "0.2.4",
     "controller": [
         {
@@ -21,8 +22,11 @@
     "task": [
         {
             "name": "进入游戏",
-            "entry": "返回主界面开始",
+            "entry": "是否需要启动游戏",
             "default_check": true,
+            "option": [
+                "选择是否启动游戏"
+            ],
             "description": "进入游戏主界面",
             "label": "进入游戏",
             "doc": "自动完成「进入游戏」。"
@@ -91,6 +95,36 @@
         }
     ],
     "option": {
+        "选择是否启动游戏": {
+            "type": "select",
+            "label": "选择是否启动游戏",
+            "description": "选择进入游戏任务是否自动启动FGO",
+            "default_case": "启动游戏",
+            "cases": [
+                {
+                    "name": "启动游戏",
+                    "label": "启动游戏",
+                    "pipeline_override": {
+                        "是否需要启动游戏": {
+                            "next": [
+                                "需要启动游戏"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "不启动游戏",
+                    "label": "不启动游戏（游戏已在后台）",
+                    "pipeline_override": {
+                        "是否需要启动游戏": {
+                            "next": [
+                                "不需要启动游戏"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
         "选择刷体力方式": {
             "type": "select",
             "label": "选择刷体力方式",
