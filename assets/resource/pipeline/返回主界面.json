@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793953837708,
+            "lastSyncTime": 1794105460978,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "D:\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 58,
-                "y": 308,
-                "zoom": 0.32
+                "x": -354,
+                "y": -559,
+                "zoom": 0.46
             },
             "filename": "返回主界面",
             "version": "v2.1.1"
@@ -252,6 +252,9 @@
             }
         },
         "post_delay": 3000,
+        "next": [
+            "[Anchor]启动游戏一次"
+        ],
         "$__mpe_code": {
             "position": {
                 "x": 2186,
@@ -259,7 +262,27 @@
             }
         }
     },
+    "按ESc返回主界面-返回主界面_第二次": {
+        "max_hit": 25,
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    4,
+                    111
+                ]
+            }
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2126,
+                "y": 2300
+            }
+        }
+    },
     "无法处理开始截图": {
+        "max_hit": 1,
         "action": {
             "type": "Screencap"
         },
@@ -297,6 +320,7 @@
         }
     },
     "是否需要启动游戏": {
+        "post_delay": 2000,
         "next": [
             "需要启动游戏",
             "不需要启动游戏"
@@ -445,6 +469,7 @@
                 "package": "com.bilibili.fatego"
             }
         },
+        "anchor": "启动游戏一次",
         "next": [
             "启动游戏结束"
         ],
@@ -481,22 +506,11 @@
             }
         }
     },
-    "按ESc返回主界面-返回主界面_第二次": {
-        "max_hit": 25,
-        "action": {
-            "type": "ClickKey",
-            "param": {
-                "key": [
-                    4,
-                    111
-                ]
-            }
-        },
-        "post_delay": 3000,
+    "$__mpe_anchor_启动游戏一次_返回主界面": {
         "$__mpe_code": {
             "position": {
-                "x": 2126,
-                "y": 2300
+                "x": 2695,
+                "y": 1800
             }
         }
     }
