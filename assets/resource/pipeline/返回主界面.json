@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1794105460978,
+            "lastSyncTime": 1794107859311,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "D:\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": -354,
-                "y": -559,
-                "zoom": 0.46
+                "x": 296,
+                "y": 277,
+                "zoom": 0.4
             },
             "filename": "返回主界面",
             "version": "v2.1.1"
+        }
+    },
+    "$__mpe_anchor_启动游戏一次_返回主界面": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2695,
+                "y": 1800
+            }
         }
     },
     "上次退出时位于战斗": {
@@ -48,8 +56,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 879,
-                "y": 264
+                "x": 498,
+                "y": 160
             }
         }
     },
@@ -93,13 +101,10 @@
             }
         },
         "post_delay": 2500,
-        "next": [
-            "判断是否在主界面-方法二"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 2588,
-                "y": -1401
+                "x": 2240,
+                "y": -1471
             }
         }
     },
@@ -122,8 +127,8 @@
         "post_delay": 2500,
         "$__mpe_code": {
             "position": {
-                "x": 3257,
-                "y": -1375
+                "x": 3111,
+                "y": -1449
             }
         }
     },
@@ -144,13 +149,10 @@
             }
         },
         "post_delay": 2000,
-        "next": [
-            "判断是否在主界面-方法三"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 2918,
-                "y": -1376
+                "x": 2707,
+                "y": -1463
             }
         }
     },
@@ -201,8 +203,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1276,
-                "y": 133
+                "x": 980,
+                "y": 18
             }
         }
     },
@@ -327,8 +329,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 401,
-                "y": 89
+                "x": 53,
+                "y": -22
             }
         }
     },
@@ -431,8 +433,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1586,
-                "y": 81
+                "x": 1355,
+                "y": -23
             }
         }
     },
@@ -457,8 +459,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 2457,
-                "y": -888
+                "x": 2485,
+                "y": -966
             }
         }
     },
@@ -475,8 +477,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 913,
-                "y": -32
+                "x": 501,
+                "y": -161
             }
         }
     },
@@ -503,14 +505,6 @@
             "position": {
                 "x": 2187,
                 "y": 1054
-            }
-        }
-    },
-    "$__mpe_anchor_启动游戏一次_返回主界面": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2695,
-                "y": 1800
             }
         }
     }
