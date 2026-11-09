@@ -255,12 +255,21 @@
         },
         "post_delay": 3000,
         "next": [
-            "[Anchor]启动游戏一次"
+            "[Anchor]启动游戏一次",
+            "按Esc后空节点"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 2186,
                 "y": 1685
+            }
+        }
+    },
+    "按Esc后空节点": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2436,
+                "y": 1919
             }
         }
     },
@@ -471,7 +480,9 @@
                 "package": "com.bilibili.fatego"
             }
         },
-        "anchor": "启动游戏一次",
+        "anchor": {
+            "启动游戏一次": "需要启动游戏单引用"
+        },
         "next": [
             "启动游戏结束"
         ],
@@ -479,6 +490,55 @@
             "position": {
                 "x": 501,
                 "y": -161
+            }
+        }
+    },
+    "需要启动游戏单引用": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.bilibili.fatego"
+            }
+        },
+        "next": [
+            "需要启动游戏单引用-限流",
+            "需要启动游戏单引用-清锚点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 751,
+                "y": 73
+            }
+        }
+    },
+    "需要启动游戏单引用-限流": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "max_hit": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": 1001,
+                "y": 307
+            }
+        }
+    },
+    "需要启动游戏单引用-清锚点": {
+        "anchor": {
+            "启动游戏一次": "空节点"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1251,
+                "y": 541
+            }
+        }
+    },
+    "空节点": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1001,
+                "y": 541
             }
         }
     },
