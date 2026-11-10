@@ -3,7 +3,7 @@
     "name": "FGO",
     "label": "命运-冠位指定",
     "description": "《命运-冠位指定》日常自动化脚本",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "controller": [
         {
             "name": "安卓端",
