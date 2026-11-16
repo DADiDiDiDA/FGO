@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1794107859311,
+            "lastSyncTime": 1794529704809,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "D:\\Automate\\Git-Maawork\\FGO\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 296,
-                "y": 277,
+                "x": -376,
+                "y": 408,
                 "zoom": 0.4
             },
             "filename": "返回主界面",
@@ -19,8 +19,8 @@
     "$__mpe_anchor_启动游戏一次_返回主界面": {
         "$__mpe_code": {
             "position": {
-                "x": 2695,
-                "y": 1800
+                "x": 2623,
+                "y": 1849
             }
         }
     },
@@ -260,16 +260,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2186,
-                "y": 1685
-            }
-        }
-    },
-    "按Esc后空节点": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2436,
-                "y": 1919
+                "x": 2152,
+                "y": 1834
             }
         }
     },
@@ -287,8 +279,16 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 2126,
-                "y": 2300
+                "x": 2135,
+                "y": 2509
+            }
+        }
+    },
+    "按Esc后空节点": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2621,
+                "y": 1987
             }
         }
     },
@@ -300,8 +300,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 2169,
-                "y": 2001
+                "x": 2141,
+                "y": 2252
             }
         }
     },
@@ -397,6 +397,14 @@
             }
         }
     },
+    "空节点": {
+        "$__mpe_code": {
+            "position": {
+                "x": 986,
+                "y": 852
+            }
+        }
+    },
     "签到界面关闭-返回主界面": {
         "recognition": {
             "type": "OCR",
@@ -436,6 +444,7 @@
             "[JumpBack]右上角叉号-返回主界面",
             "[JumpBack]需要更新资料",
             "[JumpBack]上次退出时位于战斗",
+            "[JumpBack]游戏正在加载中",
             "[JumpBack]按ESc返回主界面-返回主界面",
             "[JumpBack]无法处理开始截图",
             "[JumpBack]按ESc返回主界面-返回主界面_第二次"
@@ -474,7 +483,6 @@
         }
     },
     "需要启动游戏": {
-        "post_delay": 2000,
         "action": {
             "type": "StartApp",
             "param": {
@@ -484,6 +492,7 @@
         "anchor": {
             "启动游戏一次": "需要启动游戏单引用"
         },
+        "post_delay": 2000,
         "next": [
             "启动游戏结束"
         ],
@@ -495,33 +504,21 @@
         }
     },
     "需要启动游戏单引用": {
-        "post_delay": 2000,
         "action": {
             "type": "StartApp",
             "param": {
                 "package": "com.bilibili.fatego"
             }
         },
+        "post_delay": 2000,
         "next": [
             "需要启动游戏单引用-限流",
             "需要启动游戏单引用-清锚点"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 751,
-                "y": 73
-            }
-        }
-    },
-    "需要启动游戏单引用-限流": {
-        "recognition": {
-            "type": "DirectHit"
-        },
-        "max_hit": 3,
-        "$__mpe_code": {
-            "position": {
-                "x": 1001,
-                "y": 307
+                "x": 557,
+                "y": 460
             }
         }
     },
@@ -531,16 +528,17 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 1251,
-                "y": 541
+                "x": 1013,
+                "y": 592
             }
         }
     },
-    "空节点": {
+    "需要启动游戏单引用-限流": {
+        "max_hit": 3,
         "$__mpe_code": {
             "position": {
-                "x": 1001,
-                "y": 541
+                "x": 1037,
+                "y": 322
             }
         }
     },
@@ -567,6 +565,28 @@
             "position": {
                 "x": 2187,
                 "y": 1054
+            }
+        }
+    },
+    "游戏正在加载中": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    908,
+                    663,
+                    117,
+                    51
+                ],
+                "expected": [
+                    "加载中"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2164,
+                "y": 1617
             }
         }
     }
