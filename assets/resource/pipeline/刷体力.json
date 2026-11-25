@@ -949,6 +949,7 @@
         }
     },
     "开始寻找每日任务-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -975,6 +976,7 @@
         }
     },
     "搜集种火-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1015,6 +1017,7 @@
         }
     },
     "修炼场-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1055,6 +1058,7 @@
         }
     },
     "宝物库之门-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1095,6 +1099,7 @@
         }
     },
     "打推荐等级5-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1121,6 +1126,7 @@
         }
     },
     "打推荐等级10-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1147,6 +1153,7 @@
         }
     },
     "打推荐等级25-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1173,6 +1180,7 @@
         }
     },
     "打推荐等级40-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1199,6 +1207,7 @@
         }
     },
     "打推荐等级60-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1225,6 +1234,7 @@
         }
     },
     "打推荐等级80-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {

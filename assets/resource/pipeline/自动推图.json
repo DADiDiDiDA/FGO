@@ -572,6 +572,7 @@
         }
     },
     "错误处理-数据错误": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {

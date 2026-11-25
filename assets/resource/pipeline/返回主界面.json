@@ -157,6 +157,7 @@
         }
     },
     "判断是否在主界面-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "And",
             "param": {
